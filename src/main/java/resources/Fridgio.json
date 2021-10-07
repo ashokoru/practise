@@ -1,0 +1,37 @@
+[
+{"accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjE5MzMxMDI0LCJqdGkiOiIyQzM4RDYzOC03OTRGLTQxRDgtQjdDMC0wNjE2RjMzRUI3NTcifQ.6ilH3NRu1tikTuU9ltyljAuUk0Ifq0miCjo9w0PYoJUtFSOLx52jm1-NiMoxEqBmR4SWYL4q6qDywP-ctxBDWQ"},
+[
+    {
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList",
+                "hreflang": null,
+                "media": null,
+                "title": null,
+                "type": null,
+                "deprecation": null
+            }
+        ],
+        "customerExternalId": "52D0B083-E9B7-47F6-9BAA-D22951DD1E50",
+        "vehicleExternalId": "1100299",
+        "isMultiTempUnit": "Yes"
+    },
+    {
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList",
+                "hreflang": null,
+                "media": null,
+                "title": null,
+                "type": null,
+                "deprecation": null
+            }
+        ],
+        "customerExternalId": "52D0B083-E9B7-47F6-9BAA-D22951DD1E50",
+        "vehicleExternalId": "1105024",
+        "isMultiTempUnit": "Yes"
+    }
+]
+]
