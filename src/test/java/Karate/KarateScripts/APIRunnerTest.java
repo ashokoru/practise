@@ -25,7 +25,7 @@ import net.masterthought.cucumber.ReportBuilder;
 
 //@RunWith(Karate.class)
 @KarateOptions(tags = {"~@ignore", "@Soap"}, features = "classpath:resources")
-public class APITestRunner {
+public class APIRunnerTest {
 	
 	@BeforeSuite
 	public void beforeTest() {
