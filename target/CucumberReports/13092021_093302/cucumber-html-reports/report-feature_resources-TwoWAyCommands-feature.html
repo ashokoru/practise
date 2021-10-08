@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: resources/TwoWAyCommands.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TK API Testing</td>
+            <td>13 Sep 2021, 21:33</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">resources/TwoWAyCommands.feature</td>
+                    <td      class="passed"    >22</td>
+          <td      class="failed"    >2</td>
+          <td     class="skipped"   >18</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">42</td>
+
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="3861841500">3s 861ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Two_Way_Commands.html">@Two_Way_Commands</a>
+           <a href="report-tag_parallel-false.html">@parallel=false</a>
+      </div>
+
+        
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">resources/TwoWAyCommands.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">TwoWayCommands</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">3s 861ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def propertiesData =</span>
+  
+  <span class="lead-duration duration">038ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>function() {
+  var FileInputStream = Java.type('java.io.FileInputStream');
+  var currentDirectory = java.lang.System.getProperty('user.dir');
+  var fis = new FileInputStream(currentDirectory +  '\\src\\main\\java\\resources\\global.properties');
+  var prop = new java.util.Properties();
+  var load = prop.load(fis);
+  var propData = [];
+  propData[0] = prop.get('url');
+  propData[1] = prop.get('userName');
+  propData[2] = prop.get('password');
+  propData[3] = prop.get('customerId');
+  propData[4] = prop.get('vehicleId');
+    
+  return propData;
+}
+21:32:59.333 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def data = propertiesData()</span>
+  
+  <span class="lead-duration duration">113ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url data[0]</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure ssl = true</span>
+  
+  <span class="lead-duration duration">910ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure cookies = null</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def APIurl = data[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userName = data[1]</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def password = data[2]</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def customerId = data[3]</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def vehicleId = data[4]</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = {X-External-ID: '#(customerId)'}</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestBody = {&quot;userName&quot;: '#(userName)',&quot;password&quot;: '#(password)'}</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">params {vehicles: '#(vehicleId)'}</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">*</span>
+  <span class="name">def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'}</span>
+  
+  <span class="lead-duration duration">1s 391ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>com.intuit.karate.exception.KarateException: -unknown-:40 - </a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: -unknown-:40 - 
+TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>21:33:01.834 feature call failed: classpath:resources/TokenTwoWay.feature
+arg: {&quot;APIurl&quot;:&quot;https://restdev1.tracking.thermoking.com/&quot;,&quot;userName&quot;:&quot;webservice.user214@MISSING.COM&quot;,&quot;password&quot;:&quot;Pass@1234&quot;,&quot;customerId&quot;:&quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;}
+TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">resources/TokenTwoWay.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>{
+  &quot;APIurl&quot;: &quot;https://restdev1.tracking.thermoking.com/&quot;,
+  &quot;userName&quot;: &quot;webservice.user214@MISSING.COM&quot;,
+  &quot;password&quot;: &quot;Pass@1234&quot;,
+  &quot;customerId&quot;: &quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;
+}
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def obtainToken =</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>{
+APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'
+}
+21:33:00.444 &gt;&gt; lock acquired, begin callonce: read('TokenTwoWay.feature')</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">print obtainToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>21:33:00.465 [print] {
+  &quot;APIurl&quot;: &quot;https://restdev1.tracking.thermoking.com/&quot;,
+  &quot;userName&quot;: &quot;webservice.user214@MISSING.COM&quot;,
+  &quot;password&quot;: &quot;Pass@1234&quot;,
+  &quot;customerId&quot;: &quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url APIurl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path 'connected-solutions/obtainToken/'</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">header X-External-ID = &quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">body= {&quot;userName&quot;: &quot;webservice.user214@MISSING.COM&quot;,&quot;password&quot;: &quot;Pass@1234&quot;}</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request body</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">1s 356ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>21:33:00.612 request:
+1 &gt; POST https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 68
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: restdev1.tracking.thermoking.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 &gt; X-External-ID: 0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4
+{&quot;userName&quot;:&quot;webservice.user214@MISSING.COM&quot;,&quot;password&quot;:&quot;Pass@1234&quot;}
+
+21:33:01.833 response time in milliseconds: 1218.48
+1 &lt; 429
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 16:03:01 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: [AWSALB=qY0lyBY4V+rL6e2X+vj5ZSHTjrlMCPWBC4b1MNbkJ0cqNzjNRKTj6R6w+DD9wH3Pl+2kNeSJ8o6+gT4f5ouwyYV0bBWIy8GWxfkrniDPVLMY1PoWtx5T9V/SI4pP; Expires=Mon, 20 Sep 2021 16:03:01 GMT; Path=/, AWSALBCORS=qY0lyBY4V+rL6e2X+vj5ZSHTjrlMCPWBC4b1MNbkJ0cqNzjNRKTj6R6w+DD9wH3Pl+2kNeSJ8o6+gT4f5ouwyYV0bBWIy8GWxfkrniDPVLMY1PoWtx5T9V/SI4pP; Expires=Mon, 20 Sep 2021 16:03:01 GMT; Path=/; SameSite=None; Secure]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-XSS-Protection: 1; mode=block
+{&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
+          <a>com.intuit.karate.exception.KarateException: TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>21:33:01.834 status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def authToken = response.accessToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">print authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def authToken = obtainToken.response.accessToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def result =</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>function(pause){
+java.lang.Thread.sleep(pause)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Update Set Point</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'connected-solutions/updateSetPoint/'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">param zone = '1'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">param setpoint = '2'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header X-OAUTH2-Token = authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestBody</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[0].customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[0].vehicleId == vehicleId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestAPIName = response[0].requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestAPIName</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

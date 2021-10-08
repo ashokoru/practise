@@ -1,0 +1,20 @@
+<testsuite failures="1" name="resources/AuthToken.feature" skipped="0" tests="1" time="0.195856">
+  <testcase classname="resources.AuthToken" name="Generate auth token" time="0.195856">
+    <failure message="AuthToken.feature:14 - javascript evaluation failed: APIurl, ReferenceError: &quot;APIurl&quot; is not defined in &lt;eval&gt; at line number 1">* def obtainToken = ....................................................... passed
+Then print obtainToken .................................................... passed
+* url APIurl .............................................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: AuthToken.feature:14 - javascript evaluation failed: APIurl, ReferenceError: "APIurl" is not defined in &lt;eval&gt; at line number 1&#13;
+	at ✽.* url APIurl (AuthToken.feature:14)&#13;
+
+Given path 'connected-solutions/obtainToken/' ............................. skipped
+And header X-External-ID = customerId ..................................... skipped
+And body= {"userName": userName,"password": password} ..................... skipped
+And request body .......................................................... skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+* def authToken = response.accessToken .................................... skipped
+Then print authToken ...................................................... skipped</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,16 @@
+<testsuite failures="1" name="resources/Details.feature" skipped="0" tests="1" time="7.955474">
+  <testcase classname="resources.Details" name="testing the get call for User Details" time="7.955474">
+    <failure message="Details.feature:11 - path: $[1], actual: null, expected: {id=1, first_name=Robert, last_name=Schwartz, email=rob23@gmail.com}, reason: actual json-path does not exist">Given url 'https://comtable.free.beeceptor.com' ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Given expectedResult=read('./resources/Expected.json') .................... passed
+Given def expectedResultParam = expectedResult[0] ......................... passed
+And match response[1] == expectedResultParam .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Details.feature:11 - path: $[1], actual: null, expected: {id=1, first_name=Robert, last_name=Schwartz, email=rob23@gmail.com}, reason: actual json-path does not exist&#13;
+	at ✽.And match response[1] == expectedResultParam (Details.feature:11)&#13;
+
+And match response[0] == expectedResultParam .............................. skipped</failure>
+  </testcase>
+</testsuite>

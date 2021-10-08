@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"pool-1-thread-4"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"Soap[2.1:94]","start":980,"end":1043,"title":"Soap[2.1:94] 05:30:00.980-05:30:01.043 Update Set Point zone 1"},{"id":2,"group":1,"content":"Soap[3:99]","start":1050,"end":1051,"title":"Soap[3:99] 05:30:01.050-05:30:01.051 Clear All Alarms"},{"id":3,"group":1,"content":"Soap[4:126]","start":1059,"end":1060,"title":"Soap[4:126] 05:30:01.059-05:30:01.060 Perform Pre Trip"},{"id":4,"group":1,"content":"Soap[5.1:182]","start":1067,"end":1068,"title":"Soap[5.1:182] 05:30:01.067-05:30:01.068 Defrostt1"},{"id":5,"group":1,"content":"Soap[6.1:215]","start":1074,"end":1075,"title":"Soap[6.1:215] 05:30:01.074-05:30:01.075 ContinuousMode Mode"},{"id":6,"group":1,"content":"Soap[6.2:216]","start":1082,"end":1083,"title":"Soap[6.2:216] 05:30:01.082-05:30:01.083 CycleSentryMode Mode"},{"id":7,"group":1,"content":"Soap[7:219]","start":1088,"end":1090,"title":"Soap[7:219] 05:30:01.088-05:30:01.090 Configure Temperature Settings"},{"id":8,"group":1,"content":"Soap[8:253]","start":1098,"end":1100,"title":"Soap[8:253] 05:30:01.098-05:30:01.100 View Temperature Settings"},{"id":9,"group":1,"content":"Soap[9:277]","start":1106,"end":1108,"title":"Soap[9:277] 05:30:01.106-05:30:01.108 View Optiset Profile"},{"id":10,"group":1,"content":"Soap[10:301]","start":1114,"end":1115,"title":"Soap[10:301] 05:30:01.114-05:30:01.115 Activate Optiset Profile"},{"id":11,"group":1,"content":"Soap[11:331]","start":1120,"end":1122,"title":"Soap[11:331] 05:30:01.120-05:30:01.122 Configure Door Alarm"},{"id":12,"group":1,"content":"Soap[12:363]","start":1128,"end":1130,"title":"Soap[12:363] 05:30:01.128-05:30:01.130 View Door Alarm"},{"id":13,"group":1,"content":"Soap[13:387]","start":1137,"end":1138,"title":"Soap[13:387] 05:30:01.137-05:30:01.138 Remote Off"},{"id":14,"group":1,"content":"Soap[14:415]","start":1144,"end":1145,"title":"Soap[14:415] 05:30:01.144-05:30:01.145 Get Temperature Data"},{"id":15,"group":1,"content":"Soap[15:452]","start":1154,"end":1156,"title":"Soap[15:452] 05:30:01.154-05:30:01.156 Remote On"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

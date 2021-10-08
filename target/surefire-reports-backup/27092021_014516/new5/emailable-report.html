@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,629</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Karate.KarateScripts.APIRunnerTest</td><td><a href="#m0">parallelRun</a></td><td rowspan="1">1631549019959</td><td rowspan="1">6591</td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">Karate.KarateScripts.APIRunnerTest#parallelRun</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: failed features:
+resources.DetailsPost: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 995, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:43.870+0000&quot;,&quot;status&quot;:401}
+DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1041, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:44.897+0000&quot;,&quot;status&quot;:401}
+resources.TwoWAyCommands: -unknown-:40 - 
+TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1050, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:42.842+0000&quot;,&quot;status&quot;:429}
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at Karate.KarateScripts.APIRunnerTest.parallelRun(APIRunnerTest.java:54)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

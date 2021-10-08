@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "first_name": "Robert",
+    "last_name": "Schwartz",
+    "email": "rob23@gmail.com"
+  },
+  {
+    "id": 2,
+    "first_name": "Lucy",
+    "last_name": "Ballmer",
+    "email": "lucyb56@gmail.com"
+  },
+  {
+    "id": 3,
+    "first_name": "Anna",
+    "last_name": "Smith",
+    "email": "annasmith23@gmail.com"
+  },
+  "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjEyNjc3ODg5LCJqdGkiOiI1MkQwQjA4My1FOUI3LTQ3RjYtOUJBQS1EMjI5NTFERDFFNTAifQ.b9AGYWbFtJZUWRbhpkoTk1jes_qyVdrrgrEwD2tzs6tGJPiXNu0AuSSh3Tl55Npq_tbwptD3DBfnsqhHHfWbFg"
+]

@@ -1,0 +1,40 @@
+<testsuite failures="1" name="resources/TwoWAyCommands.feature" skipped="0" tests="1" time="2.486762">
+  <testcase classname="resources.TwoWAyCommands" name="Update Set Point" time="2.486762">
+    <failure message="-unknown-:40 - &#10;TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {&quot;path&quot;:&quot;/connected-solutions/obtainToken/&quot;,&quot;error&quot;:&quot;Too Many Requests&quot;,&quot;message&quot;:&quot;This client has been exceeded the allowance of requests for this API&quot;,&quot;timestamp&quot;:&quot;2021-09-13T16:03:01.686+0000&quot;,&quot;status&quot;:429}">* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:40 - 
+TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {"path":"/connected-solutions/obtainToken/","error":"Too Many Requests","message":"This client has been exceeded the allowance of requests for this API","timestamp":"2021-09-13T16:03:01.686+0000","status":429}&#13;
+	at ✽.* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} (-unknown-:40)&#13;
+
+* def authToken = obtainToken.response.accessToken ........................ skipped
+Then print authToken ...................................................... skipped
+* def result = ............................................................ skipped
+Given path 'connected-solutions/updateSetPoint/' .......................... skipped
+And param zone = '1' ...................................................... skipped
+And param setpoint = '2' .................................................. skipped
+And header X-OAUTH2-Token = authToken ..................................... skipped
+And request requestBody ................................................... skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And print response ........................................................ skipped
+And match response[0].customerId == customerId ............................ skipped
+And match response[0].vehicleId == vehicleId .............................. skipped
+* def requestAPIName = response[0].requestIdentifier ...................... skipped
+Then print requestAPIName ................................................. skipped
+And print authToken ....................................................... skipped</failure>
+  </testcase>
+</testsuite>

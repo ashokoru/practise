@@ -1,0 +1,25 @@
+<testsuite failures="1" name="resources/GetRequestStatus.feature" skipped="0" tests="1" time="40.075547">
+  <testcase classname="resources.GetRequestStatus" name="Get Request Status" time="40.075547">
+    <failure message="GetRequestStatus.feature:30 - javascript evaluation failed: authToken, ReferenceError: &quot;authToken&quot; is not defined in &lt;eval&gt; at line number 1">* def result = ............................................................ passed
+* def resu = call result 40000 ............................................ passed
+* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* def myrequestID = ....................................................... passed
+Then print myrequestID .................................................... passed
+And print requestRefUpdateSetPoint ........................................ passed
+Given path 'connected-solutions/getRequestStatus/' ........................ passed
+And header X-OAUTH2-Token = authToken ..................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: GetRequestStatus.feature:30 - javascript evaluation failed: authToken, ReferenceError: "authToken" is not defined in &lt;eval&gt; at line number 1&#13;
+	at ✽.And header X-OAUTH2-Token = authToken (GetRequestStatus.feature:30)&#13;
+
+And header X-External-ID = customerId ..................................... skipped
+And param vehicles = vehicleId ............................................ skipped
+And body= [{"customerId": customerId,"vehicleId": vehicleId,"requestReference": requestAPIName}] . skipped
+And request body .......................................................... skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And print response ........................................................ skipped
+And match response[0].externalCustomerId == customerId .................... skipped</failure>
+  </testcase>
+</testsuite>

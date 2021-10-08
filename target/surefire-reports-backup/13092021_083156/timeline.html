@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"ForkJoinPool-1-worker-1"},{"id":2,"content":"ForkJoinPool-1-worker-2"},{"id":3,"content":"pool-1-thread-3"},{"id":4,"content":"ForkJoinPool-1-worker-3"},{"id":5,"content":"ForkJoinPool-1-worker-4"},{"id":6,"content":"pool-1-thread-1"},{"id":7,"content":"pool-1-thread-2"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"AuthToken[1:5]","start":1047,"end":1261,"title":"AuthToken[1:5] 05:30:01.047-05:30:01.261 Generate auth token"},{"id":2,"group":2,"content":"Details[1:4]","start":1047,"end":8263,"title":"Details[1:4] 05:30:01.047-05:30:08.263 testing the get call for User Details"},{"id":3,"group":3,"content":"DetailsPost[1:29]","start":1047,"end":8318,"title":"DetailsPost[1:29] 05:30:01.047-05:30:08.318 Test Sample scenario"},{"id":4,"group":3,"content":"DetailsPost[2:33]","start":8329,"end":10358,"title":"DetailsPost[2:33] 05:30:08.329-05:30:10.358 Get TP Customer Details"},{"id":5,"group":3,"content":"DetailsPost[3:49]","start":10374,"end":11762,"title":"DetailsPost[3:49] 05:30:10.374-05:30:11.762 Update Vehicle Trip Start"},{"id":6,"group":4,"content":"FridgioAuthToken[1:9]","start":1047,"end":8517,"title":"FridgioAuthToken[1:9] 05:30:01.047-05:30:08.517 Generate auth token"},{"id":7,"group":5,"content":"GetRequestStatus[1:16]","start":1047,"end":41142,"title":"GetRequestStatus[1:16] 05:30:01.047-05:30:41.142 Get Request Status"},{"id":8,"group":6,"content":"Soap[1:21]","start":1332,"end":35055,"title":"Soap[1:21] 05:30:01.332-05:30:35.055 Request Status"},{"id":9,"group":2,"content":"TokenTwoWay[1:5]","start":8314,"end":8319,"title":"TokenTwoWay[1:5] 05:30:08.314-05:30:08.319 Generate auth token"},{"id":10,"group":7,"content":"TwoWAyCommands[1:76]","start":8339,"end":13107,"title":"TwoWAyCommands[1:76] 05:30:08.339-05:30:13.107 Update Set Point"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

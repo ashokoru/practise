@@ -1,0 +1,9 @@
+20:27:34.053 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:28:14.198 [print] {
+  "requestAPIName": "#(requestAPIName)",
+  "authToken": "#(authToken)",
+  "customerId": "#(customerId)",
+  "vehicleId": "#(vehicleId)"
+}
+
+20:28:14.200 [print]

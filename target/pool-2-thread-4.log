@@ -1,0 +1,159 @@
+20:47:54.974 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:47:57.872 request:
+1 > POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 > Connection: Keep-Alive
+1 > Content-Length: 655
+1 > Content-Type: application/xml; charset=UTF-8
+1 > Host: soap.tracking.thermoking.com
+1 > SOAPAction: 
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.jbossws.webservices.celtrak.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:updateSetPoint>
+            <!--1 or more repetitions:-->
+            <customerVehicles>
+                <customerid>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</customerid>
+                <!--1 or more repetitions:-->
+                <vehicles>Bluebox India 2 PROD1</vehicles>
+            </customerVehicles>
+            <zoneId>1</zoneId>
+            <setPointValue>-2</setPointValue>
+        </ser:updateSetPoint>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+20:47:59.897 response time in milliseconds: 2020.34
+1 < 200
+1 < Cache-Control: no-cache, no-store, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Length: 492
+1 < Content-Type: text/xml;charset=UTF-8
+1 < Date: Thu, 07 Oct 2021 15:17:59 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: WildFly/10
+1 < Set-Cookie: [AWSALBTG=G0n/oUGaSGqROgl8e05xAv1UzbYnFCEC9cVJmvrUxhOCmSeSAmo12gsoSRYK5x8tjO9dCEQ8WOptW3DI0YSHDBivz0rt9roADl1Y5XcS6rkXM4lRJlkIc8XdhMCIXVep3zS1cF3SgxVxfneJrSuwXGity1apkKQUpr9TDfF6erD8; Expires=Thu, 14 Oct 2021 15:17:59 GMT; Path=/, AWSALBTGCORS=G0n/oUGaSGqROgl8e05xAv1UzbYnFCEC9cVJmvrUxhOCmSeSAmo12gsoSRYK5x8tjO9dCEQ8WOptW3DI0YSHDBivz0rt9roADl1Y5XcS6rkXM4lRJlkIc8XdhMCIXVep3zS1cF3SgxVxfneJrSuwXGity1apkKQUpr9TDfF6erD8; Expires=Thu, 14 Oct 2021 15:17:59 GMT; Path=/; SameSite=None; Secure]
+1 < X-Powered-By: Undertow/1
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/><soap:Body><ns2:updateSetPointResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/"><requestReference><customerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</customerId><requestIdentifier>q3526075</requestIdentifier><vehicleId>Bluebox India 2 PROD1</vehicleId></requestReference></ns2:updateSetPointResponse></soap:Body></soap:Envelope>
+
+20:47:59.906 [print] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <soap:Body>
+    <ns2:updateSetPointResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/">
+      <requestReference>
+        <customerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</customerId>
+        <requestIdentifier>q3526075</requestIdentifier>
+        <vehicleId>Bluebox India 2 PROD1</vehicleId>
+      </requestReference>
+    </ns2:updateSetPointResponse>
+  </soap:Body>
+</soap:Envelope>
+
+20:48:00.007 [print] q3526075
+20:48:32.178 request:
+1 > POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 > Connection: Keep-Alive
+1 > Content-Length: 640
+1 > Content-Type: application/xml; charset=UTF-8
+1 > Host: soap.tracking.thermoking.com
+1 > SOAPAction: 
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.jbossws.webservices.celtrak.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:getRequestStatus>
+            <!--1 or more repetitions:-->
+            <RequestStatuses>
+                <customerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</customerId>
+                <requestReference>q3526075</requestReference>
+                <vehicleId>Bluebox India 2 PROD1</vehicleId>
+            </RequestStatuses>
+            <operatorName>?</operatorName>
+        </ser:getRequestStatus>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+20:48:36.734 response time in milliseconds: 4554.01
+1 < 200
+1 < Cache-Control: no-cache, no-store, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Length: 999
+1 < Content-Type: text/xml;charset=UTF-8
+1 < Date: Thu, 07 Oct 2021 15:18:36 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: WildFly/10
+1 < Set-Cookie: [AWSALBTG=uVuE6MrJqcPu+R0gwq7ZXt1ZIk6IAJSGpQBTSxock5Wi+UYWlq3PJyXPDLN2cKC9/tsOBJ6Gu8rPuAtGB1AEdDYHmW1yURJ5eHpEkRknzidhZ7IEQyaEmq0goaIAW6fa9J3q/vcJPBN/yTJXOQz2X9CFS1b/CsyhyjRxE2dZYU0x; Expires=Thu, 14 Oct 2021 15:18:33 GMT; Path=/, AWSALBTGCORS=uVuE6MrJqcPu+R0gwq7ZXt1ZIk6IAJSGpQBTSxock5Wi+UYWlq3PJyXPDLN2cKC9/tsOBJ6Gu8rPuAtGB1AEdDYHmW1yURJ5eHpEkRknzidhZ7IEQyaEmq0goaIAW6fa9J3q/vcJPBN/yTJXOQz2X9CFS1b/CsyhyjRxE2dZYU0x; Expires=Thu, 14 Oct 2021 15:18:33 GMT; Path=/; SameSite=None; Secure]
+1 < X-Powered-By: Undertow/1
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/><soap:Body><ns2:getRequestStatusResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/"><RequestStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:mqRequestStatus"><commandValue>-2.0</commandValue><communicationType>SMS</communicationType><dateRequestSent>2021-10-07T15:17:59.637Z</dateRequestSent><errorType></errorType><externalCustomerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</externalCustomerId><externalVehicleid>Bluebox India 2 PROD1</externalVehicleid><messageType>Two Way New Set Point Zone 1</messageType><requestMessageTypeId>7</requestMessageTypeId><requestStatusId>4</requestStatusId><sourceIndicator>0</sourceIndicator><statusType>Scheduled</statusType><unitStateType></unitStateType><vehicleRequestId>3612332</vehicleRequestId></RequestStatus></ns2:getRequestStatusResponse></soap:Body></soap:Envelope>
+
+20:48:36.742 [print] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <soap:Body>
+    <ns2:getRequestStatusResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/">
+      <RequestStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:mqRequestStatus">
+        <commandValue>-2.0</commandValue>
+        <communicationType>SMS</communicationType>
+        <dateRequestSent>2021-10-07T15:17:59.637Z</dateRequestSent>
+        <errorType/>
+        <externalCustomerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</externalCustomerId>
+        <externalVehicleid>Bluebox India 2 PROD1</externalVehicleid>
+        <messageType>Two Way New Set Point Zone 1</messageType>
+        <requestMessageTypeId>7</requestMessageTypeId>
+        <requestStatusId>4</requestStatusId>
+        <sourceIndicator>0</sourceIndicator>
+        <statusType>Scheduled</statusType>
+        <unitStateType/>
+        <vehicleRequestId>3612332</vehicleRequestId>
+      </RequestStatus>
+    </ns2:getRequestStatusResponse>
+  </soap:Body>
+</soap:Envelope>
+
+
+        </ser:getRequestStatus>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+21:21:39.148 response time in milliseconds: 3703.43
+1 < 200
+1 < Cache-Control: no-cache, no-store, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Length: 993
+1 < Content-Type: text/xml;charset=UTF-8
+1 < Date: Mon, 13 Sep 2021 15:51:39 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: WildFly/10
+1 < Set-Cookie: [AWSALBTG=qWvtUn5IemfkNM3XBhS46tLeo1vbI4n55fKnlbwZKL7qZb1E+qz/nf6iGThkl5AbbbOdr93IWGu0tCEoivldrisLNebWHskQRYacXwiTq309s4sgXuz4U0mDVnk69jkP74hXT/Dqg42YKr9GQKSeSiMTQe8fCOrRZ72A04di3FpE; Expires=Mon, 20 Sep 2021 15:51:36 GMT; Path=/, AWSALBTGCORS=qWvtUn5IemfkNM3XBhS46tLeo1vbI4n55fKnlbwZKL7qZb1E+qz/nf6iGThkl5AbbbOdr93IWGu0tCEoivldrisLNebWHskQRYacXwiTq309s4sgXuz4U0mDVnk69jkP74hXT/Dqg42YKr9GQKSeSiMTQe8fCOrRZ72A04di3FpE; Expires=Mon, 20 Sep 2021 15:51:36 GMT; Path=/; SameSite=None; Secure]
+1 < X-Powered-By: Undertow/1
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/><soap:Body><ns2:getRequestStatusResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/"><RequestStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:mqRequestStatus"><commandValue>-2.0</commandValue><communicationType>SMS</communicationType><dateRequestSent>2021-09-13T15:51:03.157Z</dateRequestSent><errorType></errorType><externalCustomerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</externalCustomerId><externalVehicleid>Bluebox India 2</externalVehicleid><messageType>Two Way New Set Point Zone 1</messageType><requestMessageTypeId>7</requestMessageTypeId><requestStatusId>4</requestStatusId><sourceIndicator>0</sourceIndicator><statusType>Scheduled</statusType><unitStateType></unitStateType><vehicleRequestId>3553357</vehicleRequestId></RequestStatus></ns2:getRequestStatusResponse></soap:Body></soap:Envelope>
+
+21:21:39.154 [print] <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+  <soap:Body>
+    <ns2:getRequestStatusResponse xmlns:ns2="http://service.jbossws.webservices.celtrak.com/">
+      <RequestStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:mqRequestStatus">
+        <commandValue>-2.0</commandValue>
+        <communicationType>SMS</communicationType>
+        <dateRequestSent>2021-09-13T15:51:03.157Z</dateRequestSent>
+        <errorType/>
+        <externalCustomerId>4560BD5E-BD7B-42B0-8DCB-627EB8454C72</externalCustomerId>
+        <externalVehicleid>Bluebox India 2</externalVehicleid>
+        <messageType>Two Way New Set Point Zone 1</messageType>
+        <requestMessageTypeId>7</requestMessageTypeId>
+        <requestStatusId>4</requestStatusId>
+        <sourceIndicator>0</sourceIndicator>
+        <statusType>Scheduled</statusType>
+        <unitStateType/>
+        <vehicleRequestId>3553357</vehicleRequestId>
+      </RequestStatus>
+    </ns2:getRequestStatusResponse>
+  </soap:Body>
+</soap:Envelope>
+

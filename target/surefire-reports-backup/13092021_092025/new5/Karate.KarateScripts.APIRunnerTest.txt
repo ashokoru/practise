@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: Karate.KarateScripts.APIRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 56.492 s <<< FAILURE! - in Karate.KarateScripts.APIRunnerTest
+Karate.KarateScripts.APIRunnerTest.parallelRun  Time elapsed: 53.523 s  <<< FAILURE!
+java.lang.AssertionError: 
+failed features:
+resources.DetailsPost: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1250, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {"path":"/connected-solutions/GetCarrierVehicleList/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:47:30.904+0000","status":401}
+DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1252, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&vehicleExtId=1100295&scheduledStartTime=2021-05-19+09%3A00%3A00&scheduledDeliveryTime=2021-05-19+09%3A00%3A00&commodity=, response: {"path":"/connected-solutions/StartTrip/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:47:32.316+0000","status":401}
+
+	at Karate.KarateScripts.APIRunnerTest.parallelRun(APIRunnerTest.java:54)
+

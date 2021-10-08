@@ -1,0 +1,95 @@
+20:40:18.797 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:40:24.535 >> lock acquired, begin callonce: read('FridgioAuthToken.feature')
+20:40:24.701 request:
+1 > POST https://restdev1.tracking.thermoking.com/connected-solutions/GetAuthToken/
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 72
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: restdev1.tracking.thermoking.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 > X-External-ID: 5-UUvQsTkfI
+{"userName":"webservice.usertp01@demosystem.com","password":"Pass@1234"}
+
+20:40:26.499 response time in milliseconds: 1796.53
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 13 Sep 2021 15:10:26 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: [AWSALB=ZR/6r2+55suq4qFpkQuqv7GEH68Y1qMzivkr4gMLKPe3VRacAohlRNmlnzg9wHT5c4VG0KDk0qzGe2RScHu+ZXv4/XfnDb2TNtj9mI+HkiAptLuQPoZ5SC4PehzS; Expires=Mon, 20 Sep 2021 15:10:26 GMT; Path=/, AWSALBCORS=ZR/6r2+55suq4qFpkQuqv7GEH68Y1qMzivkr4gMLKPe3VRacAohlRNmlnzg9wHT5c4VG0KDk0qzGe2RScHu+ZXv4/XfnDb2TNtj9mI+HkiAptLuQPoZ5SC4PehzS; Expires=Mon, 20 Sep 2021 15:10:26 GMT; Path=/; SameSite=None; Secure]
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":"5-UUvQsTkfI","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw","accessRefreshToken":"2ba4743b7fcb4758b3fe5bfa17ddde8e","expiresIn":448145,"_links":{"self":{"href":"http://restdev1.tracking.thermoking.com/connected-solutions/GetAuthToken"}}}
+
+20:40:26.505 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:26.508 << lock released, cached callonce: read('FridgioAuthToken.feature')
+20:40:26.515 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:26.519 [print] data
+20:40:26.541 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:40:26.549 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:26.550 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:26.586 [print] 
+20:40:26.597 request:
+1 > POST https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 72
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: restdev1.tracking.thermoking.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 > X-External-ID: 5-UUvQsTkfI
+1 > X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+{"userName":"webservice.usertp01@demosystem.com","password":"Pass@1234"}
+
+20:40:28.229 response time in milliseconds: 1628.24
+1 < 401
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 13 Sep 2021 15:10:27 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: [AWSALB=0rx3yaAH8Z2kRTmS6XmtJPzjmv2YY8cNdfppGOMtsWSY0mIrIhMtvtBi9WQqkGcdea9P0aKIUBn7SXF3fmM/8Sar6GBrlMP2qp2oPP7QL9osJDEuP2S60cEwK5V9; Expires=Mon, 20 Sep 2021 15:10:27 GMT; Path=/, AWSALBCORS=0rx3yaAH8Z2kRTmS6XmtJPzjmv2YY8cNdfppGOMtsWSY0mIrIhMtvtBi9WQqkGcdea9P0aKIUBn7SXF3fmM/8Sar6GBrlMP2qp2oPP7QL9osJDEuP2S60cEwK5V9; Expires=Mon, 20 Sep 2021 15:10:27 GMT; Path=/; SameSite=None; Secure]
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"timestamp":"2021-09-13T15:10:27.978+0000","status":401,"error":"Unauthorized","message":"Invalid Carrier External Id","path":"/connected-solutions/GetCarrierVehicleList/"}
+
+20:40:28.232 status code was: 401, expected: 200, response time: 1628, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {"path":"/connected-solutions/GetCarrierVehicleList/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:10:27.978+0000","status":401}
+20:40:28.277 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:40:28.299 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:28.300 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:40:28.321 request:
+1 > POST https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&vehicleExtId=1100295&scheduledStartTime=2021-05-19+09%3A00%3A00&scheduledDeliveryTime=2021-05-19+09%3A00%3A00&commodity=
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 72
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: restdev1.tracking.thermoking.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 > X-External-ID: 5-UUvQsTkfI
+1 > X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+{"userName":"webservice.usertp01@demosystem.com","password":"Pass@1234"}
+
+20:40:29.657 response time in milliseconds: 1331.89
+1 < 401
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 13 Sep 2021 15:10:29 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: [AWSALB=tzIiVcKpDfn2ggGpdOeTHwh480m5p0bnam87nUF8iub6e7B0f7IEA/ijePurKBLBuBFnGG/idyJ8ezZ3ucfDJIZ+i4MTVSEFIAn/RVNusfnLt+TllncfMdFIsflt; Expires=Mon, 20 Sep 2021 15:10:29 GMT; Path=/, AWSALBCORS=tzIiVcKpDfn2ggGpdOeTHwh480m5p0bnam87nUF8iub6e7B0f7IEA/ijePurKBLBuBFnGG/idyJ8ezZ3ucfDJIZ+i4MTVSEFIAn/RVNusfnLt+TllncfMdFIsflt; Expires=Mon, 20 Sep 2021 15:10:29 GMT; Path=/; SameSite=None; Secure]
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"timestamp":"2021-09-13T15:10:29.464+0000","status":401,"error":"Unauthorized","message":"Invalid Carrier External Id","path":"/connected-solutions/StartTrip/"}
+
+20:40:29.659 status code was: 401, expected: 200, response time: 1332, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&vehicleExtId=1100295&scheduledStartTime=2021-05-19+09%3A00%3A00&scheduledDeliveryTime=2021-05-19+09%3A00%3A00&commodity=, response: {"path":"/connected-solutions/StartTrip/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:10:29.464+0000","status":401}

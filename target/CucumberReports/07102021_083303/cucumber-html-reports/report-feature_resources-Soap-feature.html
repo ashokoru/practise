@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: resources/Soap.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TK API Testing</td>
+            <td>07 Oct 2021, 20:33</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">resources/Soap.feature</td>
+                    <td      class="passed"    >41</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">41</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="78360477000">1m 18s 360ms</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Soap.html">@Soap</a>
+           <a href="report-tag_parallel-false.html">@parallel=false</a>
+      </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">resources/Soap.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Test Soap APIs Production</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2s 569ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def data = call read('PropFiles.js') { test: 'soapTwoWay' }</span>
+  
+  <span class="lead-duration duration">280ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>20:32:21.512 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url data[0]</span>
+  
+  <span class="lead-duration duration">012ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure ssl = true</span>
+  
+  <span class="lead-duration duration">2s 206ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure cookies = null</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def APIurl = data[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userName = data[1]</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def password = data[2]</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def customerId = data[3]</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def vehicleId = data[4]</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = {Content-Type: 'application/xml'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Authorization = call read('basic-auth.js') { username: '#(userName)', password: '#(password)' }</span>
+  
+  <span class="lead-duration duration">038ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">path 'Command'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def result =</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>function(pause){
+java.lang.Thread.sleep(pause)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1m 15s 790ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Update Set Point zone 1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">045ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">2s 402ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>20:32:24.491 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 655
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+20:32:26.547 response time in milliseconds: 2050.56
+1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 492
+1 &lt; Content-Type: text/xml;charset=UTF-8
+1 &lt; Date: Thu, 07 Oct 2021 15:02:26 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=sW04qkbf0VKEmOv8m8sIIKvTJEPo//AW5UYML6lK4Ux3fTar7nix+Ykq6r9y3zNOZkcrkkuEQUgWuDS2ef3BQrf38eN4kzfS5L/VhKXdHcfEpn+45qFKaftCTqzPqrBAxWVD1DfzeJZpNwxnBDhqHSn336u5nk97snk87GyVcSvz; Expires=Thu, 14 Oct 2021 15:02:26 GMT; Path=/, AWSALBTGCORS=sW04qkbf0VKEmOv8m8sIIKvTJEPo//AW5UYML6lK4Ux3fTar7nix+Ykq6r9y3zNOZkcrkkuEQUgWuDS2ef3BQrf38eN4kzfS5L/VhKXdHcfEpn+45qFKaftCTqzPqrBAxWVD1DfzeJZpNwxnBDhqHSn336u5nk97snk87GyVcSvz; Expires=Thu, 14 Oct 2021 15:02:26 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;ns2:updateSetPointResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;&lt;requestReference&gt;&lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;&lt;requestIdentifier&gt;q3525831&lt;/requestIdentifier&gt;&lt;vehicleId&gt;Bluebox India 2 PROD1&lt;/vehicleId&gt;&lt;/requestReference&gt;&lt;/ns2:updateSetPointResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>20:32:26.557 [print] &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+  &lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;
+  &lt;soap:Body&gt;
+    &lt;ns2:updateSetPointResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+      &lt;requestReference&gt;
+        &lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;
+        &lt;requestIdentifier&gt;q3525831&lt;/requestIdentifier&gt;
+        &lt;vehicleId&gt;Bluebox India 2 PROD1&lt;/vehicleId&gt;
+      &lt;/requestReference&gt;
+    &lt;/ns2:updateSetPointResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">133ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>20:32:26.696 [print] q3525831</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">36s 639ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">resources/Soap.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>{
+  &quot;requestIdentifier&quot;: &quot;q3525831&quot;
+}
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def data = call read('PropFiles.js') { test: 'soapTwoWay' }</span>
+  
+  <span class="lead-duration duration">010ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url data[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">configure ssl = true</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">configure cookies = null</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def APIurl = data[0]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def userName = data[1]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def password = data[2]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def customerId = data[3]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def vehicleId = data[4]</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">configure headers = {Content-Type: 'application/xml'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">header Authorization = call read('basic-auth.js') { username: '#(userName)', password: '#(password)' }</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">path 'Command'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def result =</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>function(pause){
+java.lang.Thread.sleep(pause)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def resu = call result 32000</span>
+  
+  <span class="lead-duration duration">32s 017ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def myrequestID =</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>{
+requestIdentifier: '#(requestIdentifier)'
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">007ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:getRequestStatus&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;RequestStatuses&gt;
+                &lt;customerId&gt;#(customerId)&lt;/customerId&gt;
+                &lt;requestReference&gt;#(requestIdentifier)&lt;/requestReference&gt;
+                &lt;vehicleId&gt;#(vehicleId)&lt;/vehicleId&gt;
+            &lt;/RequestStatuses&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:getRequestStatus&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">4s 505ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>20:32:58.828 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 640
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:getRequestStatus&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;RequestStatuses&gt;
+                &lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;
+                &lt;requestReference&gt;q3525831&lt;/requestReference&gt;
+                &lt;vehicleId&gt;Bluebox India 2 PROD1&lt;/vehicleId&gt;
+            &lt;/RequestStatuses&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:getRequestStatus&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+20:33:03.317 response time in milliseconds: 4486.27
+1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 999
+1 &lt; Content-Type: text/xml;charset=UTF-8
+1 &lt; Date: Thu, 07 Oct 2021 15:03:03 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=w9AzLo60D0f7fiDlQfL3VHJJpGqFl+5P2Gh9ibQu6/uAlNdF2cbdlCjKFnABg+pNj9uWJlH5EOpRlqgg8dHl/x3QumD3UIF6P+QNFcRkPJI+z4E6Ly9puZ/rkYJhuXIITNXjEUUJX4mTaABwxFM5o0f36zf6ukbw33CcahmdreTP; Expires=Thu, 14 Oct 2021 15:03:00 GMT; Path=/, AWSALBTGCORS=w9AzLo60D0f7fiDlQfL3VHJJpGqFl+5P2Gh9ibQu6/uAlNdF2cbdlCjKFnABg+pNj9uWJlH5EOpRlqgg8dHl/x3QumD3UIF6P+QNFcRkPJI+z4E6Ly9puZ/rkYJhuXIITNXjEUUJX4mTaABwxFM5o0f36zf6ukbw33CcahmdreTP; Expires=Thu, 14 Oct 2021 15:03:00 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;ns2:getRequestStatusResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;&lt;RequestStatus xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;ns2:mqRequestStatus&quot;&gt;&lt;commandValue&gt;-2.0&lt;/commandValue&gt;&lt;communicationType&gt;SMS&lt;/communicationType&gt;&lt;dateRequestSent&gt;2021-10-07T15:02:26.300Z&lt;/dateRequestSent&gt;&lt;errorType&gt;&lt;/errorType&gt;&lt;externalCustomerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/externalCustomerId&gt;&lt;externalVehicleid&gt;Bluebox India 2 PROD1&lt;/externalVehicleid&gt;&lt;messageType&gt;Two Way New Set Point Zone 1&lt;/messageType&gt;&lt;requestMessageTypeId&gt;7&lt;/requestMessageTypeId&gt;&lt;requestStatusId&gt;4&lt;/requestStatusId&gt;&lt;sourceIndicator&gt;0&lt;/sourceIndicator&gt;&lt;statusType&gt;Scheduled&lt;/statusType&gt;&lt;unitStateType&gt;&lt;/unitStateType&gt;&lt;vehicleRequestId&gt;3612086&lt;/vehicleRequestId&gt;&lt;/RequestStatus&gt;&lt;/ns2:getRequestStatusResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>20:33:03.325 [print] &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+  &lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;
+  &lt;soap:Body&gt;
+    &lt;ns2:getRequestStatusResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+      &lt;RequestStatus xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;ns2:mqRequestStatus&quot;&gt;
+        &lt;commandValue&gt;-2.0&lt;/commandValue&gt;
+        &lt;communicationType&gt;SMS&lt;/communicationType&gt;
+        &lt;dateRequestSent&gt;2021-10-07T15:02:26.300Z&lt;/dateRequestSent&gt;
+        &lt;errorType/&gt;
+        &lt;externalCustomerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/externalCustomerId&gt;
+        &lt;externalVehicleid&gt;Bluebox India 2 PROD1&lt;/externalVehicleid&gt;
+        &lt;messageType&gt;Two Way New Set Point Zone 1&lt;/messageType&gt;
+        &lt;requestMessageTypeId&gt;7&lt;/requestMessageTypeId&gt;
+        &lt;requestStatusId&gt;4&lt;/requestStatusId&gt;
+        &lt;sourceIndicator&gt;0&lt;/sourceIndicator&gt;
+        &lt;statusType&gt;Scheduled&lt;/statusType&gt;
+        &lt;unitStateType/&gt;
+        &lt;vehicleRequestId&gt;3612086&lt;/vehicleRequestId&gt;
+      &lt;/RequestStatus&gt;
+    &lt;/ns2:getRequestStatusResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

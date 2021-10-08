@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1609" started-at="2021-09-13T20:05:58 IST" finished-at="2021-09-13T20:06:00 IST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1609" started-at="2021-09-13T20:05:58 IST" finished-at="2021-09-13T20:06:00 IST">
+      <class name="Karate.KarateScripts.APIRunnerTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Karate.KarateScripts.APIRunnerTest@5a1c0542]" name="beforeTest" is-config="true" duration-ms="10" started-at="2021-09-13T20:05:58 IST" finished-at="2021-09-13T20:05:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="parallelRun()[pri:0, instance:Karate.KarateScripts.APIRunnerTest@5a1c0542]" name="parallelRun" duration-ms="1583" started-at="2021-09-13T20:05:58 IST" finished-at="2021-09-13T20:06:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parallelRun -->
+      </class> <!-- Karate.KarateScripts.APIRunnerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

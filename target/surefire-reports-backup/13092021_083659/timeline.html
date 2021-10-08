@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"pool-1-thread-3"},{"id":2,"content":"pool-1-thread-5"},{"id":3,"content":"pool-1-thread-2"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"DetailsPost[1:29]","start":1115,"end":8868,"title":"DetailsPost[1:29] 05:30:01.115-05:30:08.868 Test Sample scenario"},{"id":2,"group":1,"content":"DetailsPost[2:33]","start":8882,"end":10247,"title":"DetailsPost[2:33] 05:30:08.882-05:30:10.247 Get TP Customer Details"},{"id":3,"group":1,"content":"DetailsPost[3:49]","start":10257,"end":11550,"title":"DetailsPost[3:49] 05:30:10.257-05:30:11.550 Update Vehicle Trip Start"},{"id":4,"group":2,"content":"Soap[2.1:84]","start":1115,"end":44956,"title":"Soap[2.1:84] 05:30:01.115-05:30:44.956 Update Set Point zone 1"},{"id":5,"group":3,"content":"TwoWAyCommands[1:76]","start":1115,"end":11569,"title":"TwoWAyCommands[1:76] 05:30:01.115-05:30:11.569 Update Set Point"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"pool-1-thread-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"DetailsPost[1:29]","start":766,"end":8220,"title":"DetailsPost[1:29] 05:30:00.766-05:30:08.220 Test Sample scenario"},{"id":2,"group":1,"content":"DetailsPost[2:33]","start":8227,"end":9522,"title":"DetailsPost[2:33] 05:30:08.227-05:30:09.522 Get TP Customer Details"},{"id":3,"group":1,"content":"DetailsPost[3:49]","start":9552,"end":10852,"title":"DetailsPost[3:49] 05:30:09.552-05:30:10.852 Update Vehicle Trip Start"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

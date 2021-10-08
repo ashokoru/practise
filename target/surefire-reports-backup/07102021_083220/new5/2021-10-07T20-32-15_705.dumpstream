@@ -1,0 +1,4 @@
+# Created at 2021-10-07T20:32:16.500
+Boot Manifest-JAR contains absolute paths in classpath 'D:\test selinum projects\KarateScripts\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

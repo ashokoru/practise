@@ -1,0 +1,34 @@
+<testsuite failures="0" name="resources/TwoWAyCommands.feature" skipped="0" tests="1" time="10.258839">
+  <testcase classname="resources.TwoWAyCommands" name="Update Set Point" time="10.258839">
+    <system-out>* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+Given path 'connected-solutions/updateSetPoint/' .......................... passed
+And param zone = '1' ...................................................... passed
+And param setpoint = '2' .................................................. passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].customerId == customerId ............................ passed
+And match response[0].vehicleId == vehicleId .............................. passed
+* def requestAPIName = response[0].requestIdentifier ...................... passed
+Then print requestAPIName ................................................. passed
+And print authToken ....................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,27 @@
+20:27:34.053 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+20:27:34.308 [print] {
+  "APIurl": "#(APIurl)",
+  "userName": "#(userName)",
+  "password": "#(password)",
+  "customerId": "#(customerId)"
+}
+
+J9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+20:26:04.364 [print] data
+> Connection: Keep-Alive
+1 > Host: comtable.free.beeceptor.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+
+19:59:41.574 response time in milliseconds: 2207.79
+1 < 200
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 13 Sep 2021 14:29:41 GMT
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding
+{"ProductCount" :  {"Tracer SC+": "2", "Tracer Ensemble": "5", "PivotThermostat": "8", "Third Party Systems":"10"},
+"ProductAvailability" : {"Pivot Thermostat":[1, 2],"Trace 3D Plus": [1, 2],"Common Systems":[2,3],"Third Party Systems":[3,4],"Legacy Systems":[4,6],"Tracer Ensemble":[4,5],"Tracer SC+":[5,6]},
+"ControllersCount":  {"Symbio 700":"2","Symbio 800":"3"}}
+
+19:59:41.611 assertion failed: path: $[1], actual: null, expected: {id=1, first_name=Robert, last_name=Schwartz, email=rob23@gmail.com}, reason: actual json-path does not exist

@@ -1,0 +1,4544 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TK API Testing</td>
+            <td>06 Oct 2021, 19:18</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+          <p>The following summary displays scenarios that failed.</p>
+      </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+              <div class="elements">
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 609ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Update Set Point zone 1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">011ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 593ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>19:16:02.600 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 655
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:04.090 response time in milliseconds: 1488.68
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:04 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=Xle+3meNS0QUD7BvJ6+AuycfWVHk5Rb57qWS9/lS9CRHZEV+HOK/ztmYd8ezNqxU0jb64wztLhqua2XpAhKVVL5KN8L9CBd0ANUcyb4jsatYwLzoBrHKNj6pdpZ2j8TvGUHrLcWbJOjanYYfcByI+kucDr42E5fQV0daugFUX2v7; Expires=Wed, 13 Oct 2021 13:46:04 GMT; Path=/, AWSALBTGCORS=Xle+3meNS0QUD7BvJ6+AuycfWVHk5Rb57qWS9/lS9CRHZEV+HOK/ztmYd8ezNqxU0jb64wztLhqua2XpAhKVVL5KN8L9CBd0ANUcyb4jsatYwLzoBrHKNj6pdpZ2j8TvGUHrLcWbJOjanYYfcByI+kucDr42E5fQV0daugFUX2v7; Expires=Wed, 13 Oct 2021 13:46:04 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:107 - status code was: 405, expected: 200, response time: 1489, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:107 - status code was: 405, expected: 200, response time: 1489, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>19:16:04.097 status code was: 405, expected: 200, response time: 1489, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 045ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Clear All Alarms</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:clearAlarms&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:clearAlarms&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 041ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>19:16:04.121 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 614
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:clearAlarms&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:clearAlarms&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:05.158 response time in milliseconds: 1035.35
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:05 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=57z1wXRP54ed1AbDOBgk/mIkGgQjqL+Fsdmu2decG7ebOyNXDD2CGiJ75ZBe9YVeQ+da/9JxRY27a2l0Ed0KDGhZQsxCRrATecGcSFD3wnnhPWazAI9e5SCeqySqyh9hBBuJSWS2b/zR0BAU0r9McPJVx2hwCuKcZW1VfAJV/tGU; Expires=Wed, 13 Oct 2021 13:46:05 GMT; Path=/, AWSALBTGCORS=57z1wXRP54ed1AbDOBgk/mIkGgQjqL+Fsdmu2decG7ebOyNXDD2CGiJ75ZBe9YVeQ+da/9JxRY27a2l0Ed0KDGhZQsxCRrATecGcSFD3wnnhPWazAI9e5SCeqySqyh9hBBuJSWS2b/zR0BAU0r9McPJVx2hwCuKcZW1VfAJV/tGU; Expires=Wed, 13 Oct 2021 13:46:05 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:140 - status code was: 405, expected: 200, response time: 1035, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:140 - status code was: 405, expected: 200, response time: 1035, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>19:16:05.163 status code was: 405, expected: 200, response time: 1035, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 254ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Perform Pre Trip</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:performPreTrip&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:performPreTrip&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 251ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>19:16:05.201 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 620
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:performPreTrip&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:performPreTrip&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:06.447 response time in milliseconds: 1244.44
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:06 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=vk1fq9b7JFEbhexYoyQgPh/I6EtIFPj/vcDIp37hKoRkma6RdTfGGDv/8r4DhaxJBqyN0vA9Q7TpLb39WUwE7FZBobjHUv1NGeTPwioOVYFcjPF0ADW7uucpavdZ7f7xN0qyUrsPMtwDI7YRj/KiGHyLWDTmUJTMV5z4X2Ops4oS; Expires=Wed, 13 Oct 2021 13:46:06 GMT; Path=/, AWSALBTGCORS=vk1fq9b7JFEbhexYoyQgPh/I6EtIFPj/vcDIp37hKoRkma6RdTfGGDv/8r4DhaxJBqyN0vA9Q7TpLb39WUwE7FZBobjHUv1NGeTPwioOVYFcjPF0ADW7uucpavdZ7f7xN0qyUrsPMtwDI7YRj/KiGHyLWDTmUJTMV5z4X2Ops4oS; Expires=Wed, 13 Oct 2021 13:46:06 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-17">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:167 - status code was: 405, expected: 200, response time: 1244, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:167 - status code was: 405, expected: 200, response time: 1244, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>19:16:06.452 status code was: 405, expected: 200, response time: 1244, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 084ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Defrost	1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-19" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:defrost&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:defrost&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 081ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>19:16:06.489 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 638
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:defrost&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:defrost&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:07.568 response time in milliseconds: 1078.64
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:07 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=RgLM0803ANolPMZrXwVCC0krHbejO1V8PW9QrIUXF9jjF+RgLEskPDPBP/bk47NXOQUubp0yEGcU3NCTBYKKa3Z/YnEGuAQQOgqp3Ci0bjBf99SGKHgcU1VAMKssorF+ClprszW/VVeqZo0Au9zBhaWY96o2LjsUiqrE8sgq7icz; Expires=Wed, 13 Oct 2021 13:46:07 GMT; Path=/, AWSALBTGCORS=RgLM0803ANolPMZrXwVCC0krHbejO1V8PW9QrIUXF9jjF+RgLEskPDPBP/bk47NXOQUubp0yEGcU3NCTBYKKa3Z/YnEGuAQQOgqp3Ci0bjBf99SGKHgcU1VAMKssorF+ClprszW/VVeqZo0Au9zBhaWY96o2LjsUiqrE8sgq7icz; Expires=Wed, 13 Oct 2021 13:46:07 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-23">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:195 - status code was: 405, expected: 200, response time: 1079, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:195 - status code was: 405, expected: 200, response time: 1079, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>19:16:07.569 status code was: 405, expected: 200, response time: 1079, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 015ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">ContinuousMode Mode</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterContinuousMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterContinuousMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 010ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>19:16:07.592 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 630
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterContinuousMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterContinuousMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:08.598 response time in milliseconds: 1004.57
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:08 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=bxHNAniEvfFYqciIeutTqeEFrUXgInbyOwZyAeZQbKSqWZDQOp5K0P5nIAKW8ysLmdh5xq61y7CTd8f4aMy3T3Q1NLW1oVH9LKK43DogovTQgYL561/62G/8lwMBuLR9NhVvRE/jN6geXfoMNQ+A5hY2Hn40f+Ihx70V0MU/7Xjq; Expires=Wed, 13 Oct 2021 13:46:08 GMT; Path=/, AWSALBTGCORS=bxHNAniEvfFYqciIeutTqeEFrUXgInbyOwZyAeZQbKSqWZDQOp5K0P5nIAKW8ysLmdh5xq61y7CTd8f4aMy3T3Q1NLW1oVH9LKK43DogovTQgYL561/62G/8lwMBuLR9NhVvRE/jN6geXfoMNQ+A5hY2Hn40f+Ihx70V0MU/7Xjq; Expires=Wed, 13 Oct 2021 13:46:08 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:228 - status code was: 405, expected: 200, response time: 1005, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:228 - status code was: 405, expected: 200, response time: 1005, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>19:16:08.602 status code was: 405, expected: 200, response time: 1005, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 217ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">CycleSentryMode Mode</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterCycleSentryMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterCycleSentryMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 213ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>19:16:08.645 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 632
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterCycleSentryMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterCycleSentryMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:09.853 response time in milliseconds: 1208.45
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:09 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=/Ne27LEJK98pbWBglw5Dc1tKmZjG5F/dkfofkcoslnwl09OWsdTVONwfmwfHxz5xQ81fs2EEuXKFiwz+UaLeu6Bv2joaKdW0qkAfujNzOgaoBsTUMgZUBlevrCePrapkOH63nXRxtOWRscJ3htB3mFedE5HM7feVE29C3AJpY5Kr; Expires=Wed, 13 Oct 2021 13:46:09 GMT; Path=/, AWSALBTGCORS=/Ne27LEJK98pbWBglw5Dc1tKmZjG5F/dkfofkcoslnwl09OWsdTVONwfmwfHxz5xQ81fs2EEuXKFiwz+UaLeu6Bv2joaKdW0qkAfujNzOgaoBsTUMgZUBlevrCePrapkOH63nXRxtOWRscJ3htB3mFedE5HM7feVE29C3AJpY5Kr; Expires=Wed, 13 Oct 2021 13:46:09 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:228 - status code was: 405, expected: 200, response time: 1208, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:228 - status code was: 405, expected: 200, response time: 1208, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>19:16:09.858 status code was: 405, expected: 200, response time: 1208, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 279ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Configure Temperature Settings</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-37" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-39">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;settings&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+                &lt;highTemperature&gt;10&lt;/highTemperature&gt;
+                &lt;lowTemperature&gt;-10&lt;/lowTemperature&gt;
+                &lt;rangeRelativeTo&gt;1&lt;/rangeRelativeTo&gt;
+                &lt;outOfRange&gt;10&lt;/outOfRange&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 276ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-40">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-40" class="collapse collapsable-details">
+        <pre>19:16:09.892 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 951
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;settings&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+                &lt;highTemperature&gt;10&lt;/highTemperature&gt;
+                &lt;lowTemperature&gt;-10&lt;/lowTemperature&gt;
+                &lt;rangeRelativeTo&gt;1&lt;/rangeRelativeTo&gt;
+                &lt;outOfRange&gt;10&lt;/outOfRange&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:11.155 response time in milliseconds: 1262.32
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:11 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=9//IzJFLMVJHVkMZbHmKwhcD76IRS2x0GLXPkU5QwTXYR/5Wi1UbF68+nYy7GYJKKZ8tqim3RofYlg+7mtfSW/u7t5m+j6XfVM//lLBZnN3s/t5A38YHp9BgF6KhM42XOgelAZIraKq2l7ueT3ost8xRJPTvacyJdW4GZcn0MiuR; Expires=Wed, 13 Oct 2021 13:46:11 GMT; Path=/, AWSALBTGCORS=9//IzJFLMVJHVkMZbHmKwhcD76IRS2x0GLXPkU5QwTXYR/5Wi1UbF68+nYy7GYJKKZ8tqim3RofYlg+7mtfSW/u7t5m+j6XfVM//lLBZnN3s/t5A38YHp9BgF6KhM42XOgelAZIraKq2l7ueT3ost8xRJPTvacyJdW4GZcn0MiuR; Expires=Wed, 13 Oct 2021 13:46:11 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-41">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:267 - status code was: 405, expected: 200, response time: 1262, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-41" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:267 - status code was: 405, expected: 200, response time: 1262, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-42" class="collapse collapsable-details">
+        <pre>19:16:11.168 status code was: 405, expected: 200, response time: 1262, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 078ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Temperature Settings</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-43" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-44">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-44" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-45">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-45" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 073ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-46">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-46" class="collapse collapsable-details">
+        <pre>19:16:11.214 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 648
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:12.281 response time in milliseconds: 1066.11
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:12 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=+nN4y8cT/hP21EYkFJIoDIiWKcU4ZJFZqSNbqBRprtF/34NjVpGkRON6ynzBjwGmHhYGae4ZDYEHFyFQZnJCvXGxkobae2DJTfq/h4boWnVEDf6hrX3o+8HYptOKw+wmXVZVBX0NjT2ZwTkrujzJygg6m1aH0SWnIkuPD+1kbF0A; Expires=Wed, 13 Oct 2021 13:46:12 GMT; Path=/, AWSALBTGCORS=+nN4y8cT/hP21EYkFJIoDIiWKcU4ZJFZqSNbqBRprtF/34NjVpGkRON6ynzBjwGmHhYGae4ZDYEHFyFQZnJCvXGxkobae2DJTfq/h4boWnVEDf6hrX3o+8HYptOKw+wmXVZVBX0NjT2ZwTkrujzJygg6m1aH0SWnIkuPD+1kbF0A; Expires=Wed, 13 Oct 2021 13:46:12 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:294 - status code was: 405, expected: 200, response time: 1066, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-47" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:294 - status code was: 405, expected: 200, response time: 1066, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>19:16:12.288 status code was: 405, expected: 200, response time: 1066, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 201ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Optiset Profile</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-49" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-50">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-50" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-51">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-51" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 197ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-52">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-52" class="collapse collapsable-details">
+        <pre>19:16:12.319 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 628
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:13.511 response time in milliseconds: 1191.89
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:13 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=l51w/tdNkwcjRBysVK/NgowODLtlM7B1q9jAuuNvWcJgjIDaICkbK79AskAm51GjCQIjLOtDmfEq07akP0OLkQ8BhgL8ijYfqgZnGLbJG+VfgBwXRQbZ0gjLeprW2efE7nxYGhT+OJQQyUPCYoVNSBVfAZwhBzSLd48LKwMsfwr6; Expires=Wed, 13 Oct 2021 13:46:13 GMT; Path=/, AWSALBTGCORS=l51w/tdNkwcjRBysVK/NgowODLtlM7B1q9jAuuNvWcJgjIDaICkbK79AskAm51GjCQIjLOtDmfEq07akP0OLkQ8BhgL8ijYfqgZnGLbJG+VfgBwXRQbZ0gjLeprW2efE7nxYGhT+OJQQyUPCYoVNSBVfAZwhBzSLd48LKwMsfwr6; Expires=Wed, 13 Oct 2021 13:46:13 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-53">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:318 - status code was: 405, expected: 200, response time: 1192, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-53" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:318 - status code was: 405, expected: 200, response time: 1192, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-54">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details">
+        <pre>19:16:13.515 status code was: 405, expected: 200, response time: 1192, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 010ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-55">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Activate Optiset Profile</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-55" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-56">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-56" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-57">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-57" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:activateOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;profile_id&gt;625295551&lt;/profile_id&gt;
+            &lt;setPoint&gt;-23&lt;/setPoint&gt;
+            &lt;language&gt;1&lt;/language&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:activateOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 007ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-58">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-58" class="collapse collapsable-details">
+        <pre>19:16:13.550 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 758
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:activateOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;profile_id&gt;625295551&lt;/profile_id&gt;
+            &lt;setPoint&gt;-23&lt;/setPoint&gt;
+            &lt;language&gt;1&lt;/language&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:activateOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:14.553 response time in milliseconds: 1002.56
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:14 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=Zl1ujS+iopMLDJipyput+ZNrqLeuG25kyWanzzWsy4SrYO+0YtFhuEXMwXpA9jSwxFbaYar3EOwNmoBQ9Y6tQ2CjnDoa7yH47FuYTPRf61Lbmv0BJtos5CsLJietfp3CYnAuyCPjic8BJkNnWsK+tXUp7mk1fZRqxc8bMJCu0bSj; Expires=Wed, 13 Oct 2021 13:46:14 GMT; Path=/, AWSALBTGCORS=Zl1ujS+iopMLDJipyput+ZNrqLeuG25kyWanzzWsy4SrYO+0YtFhuEXMwXpA9jSwxFbaYar3EOwNmoBQ9Y6tQ2CjnDoa7yH47FuYTPRf61Lbmv0BJtos5CsLJietfp3CYnAuyCPjic8BJkNnWsK+tXUp7mk1fZRqxc8bMJCu0bSj; Expires=Wed, 13 Oct 2021 13:46:14 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-59">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 405, expected: 200, response time: 1003, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-59" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 405, expected: 200, response time: 1003, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-60">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-60" class="collapse collapsable-details">
+        <pre>19:16:14.556 status code was: 405, expected: 200, response time: 1003, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 079ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Configure Door Alarm</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-62">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-62" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;settings&gt;
+                &lt;dwellTime&gt;20&lt;/dwellTime&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 074ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-64">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-64" class="collapse collapsable-details">
+        <pre>19:16:14.591 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 799
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;settings&gt;
+                &lt;dwellTime&gt;20&lt;/dwellTime&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:15.660 response time in milliseconds: 1068.39
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:15 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=vTQ5aqYkNXsIu3uKfpKhc1/jTYnBFHKFWv4haqUKbICXHofKIRQK2v5kXJXqp4MYOHH0irbhdb108V5fodLPRhby/Sz/0cyCHq834T4VEu/S0dtS1PdLzmmXrCTCoCwZhY4qd1j5xZi7h4M9HpQK9xjfol6cqJQ+sNFzVD863la5; Expires=Wed, 13 Oct 2021 13:46:15 GMT; Path=/, AWSALBTGCORS=vTQ5aqYkNXsIu3uKfpKhc1/jTYnBFHKFWv4haqUKbICXHofKIRQK2v5kXJXqp4MYOHH0irbhdb108V5fodLPRhby/Sz/0cyCHq834T4VEu/S0dtS1PdLzmmXrCTCoCwZhY4qd1j5xZi7h4M9HpQK9xjfol6cqJQ+sNFzVD863la5; Expires=Wed, 13 Oct 2021 13:46:15 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-65">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:377 - status code was: 405, expected: 200, response time: 1068, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-65" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:377 - status code was: 405, expected: 200, response time: 1068, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-66">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-66" class="collapse collapsable-details">
+        <pre>19:16:15.665 status code was: 405, expected: 200, response time: 1068, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 195ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-67">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Door Alarm</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-67" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-68">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-68" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-69">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repeti+E13:E15tions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 192ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-70">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-70" class="collapse collapsable-details">
+        <pre>19:16:15.702 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 626
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repeti+E13:E15tions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:16.889 response time in milliseconds: 1186.62
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:17 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=sh1H3yWa836e5/BNLrTtmkccxlyoQtEqgMTGUN+VeKL6TVMRVo6LruyxYr167sBBwsxJeta9WDet2LgemKe6hdLiRNNj7scPsqUeGGa6IK0G9wQqHfrGWb0uK5cgQBSqpObq8yC51xguuVYHkjXsqq3MvUZRvXMu+K66EwoHpTLv; Expires=Wed, 13 Oct 2021 13:46:16 GMT; Path=/, AWSALBTGCORS=sh1H3yWa836e5/BNLrTtmkccxlyoQtEqgMTGUN+VeKL6TVMRVo6LruyxYr167sBBwsxJeta9WDet2LgemKe6hdLiRNNj7scPsqUeGGa6IK0G9wQqHfrGWb0uK5cgQBSqpObq8yC51xguuVYHkjXsqq3MvUZRvXMu+K66EwoHpTLv; Expires=Wed, 13 Oct 2021 13:46:16 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-71">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:404 - status code was: 405, expected: 200, response time: 1187, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-71" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:404 - status code was: 405, expected: 200, response time: 1187, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-72">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details">
+        <pre>19:16:16.894 status code was: 405, expected: 200, response time: 1187, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 088ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-73">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Remote Off</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-73" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-74">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-74" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-75">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOff&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOff&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 085ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-76">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-76" class="collapse collapsable-details">
+        <pre>19:16:16.928 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 610
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOff&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOff&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:16:18.011 response time in milliseconds: 1082.72
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:46:18 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=XUWqdq+aaXwD+qvDwsRh+VWC1hzqZqzXuNkkAPEnSZakpYmwJILPQFdfUghasjvGRBZSijRAZGrzMazrmY4e0CxIBU9vFUAaeqRRUHJvlbcU6O+F5rm0O74sASn2Fc6ngOxaBEV2bdQfoEB/aBdNFzESLxPcd1sHWrDaCYe1j3Uz; Expires=Wed, 13 Oct 2021 13:46:18 GMT; Path=/, AWSALBTGCORS=XUWqdq+aaXwD+qvDwsRh+VWC1hzqZqzXuNkkAPEnSZakpYmwJILPQFdfUghasjvGRBZSijRAZGrzMazrmY4e0CxIBU9vFUAaeqRRUHJvlbcU6O+F5rm0O74sASn2Fc6ngOxaBEV2bdQfoEB/aBdNFzESLxPcd1sHWrDaCYe1j3Uz; Expires=Wed, 13 Oct 2021 13:46:18 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-77">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:428 - status code was: 405, expected: 200, response time: 1083, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-77" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:428 - status code was: 405, expected: 200, response time: 1083, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details">
+        <pre>19:16:18.013 status code was: 405, expected: 200, response time: 1083, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/remoteOffResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/remoteOffResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 162ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-79">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Remote On</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-79" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-80">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-80" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-81">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-81" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOn&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOn&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">1s 158ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-82">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-82" class="collapse collapsable-details">
+        <pre>19:17:57.318 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 608
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOn&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2 PROD1&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOn&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+19:17:58.469 response time in milliseconds: 1149.81
+1 &lt; 405
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 104
+1 &lt; Content-Type: text/html;charset=UTF-8
+1 &lt; Date: Wed, 06 Oct 2021 13:47:58 GMT
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=5i5R7sbGrTD4ZipxEuXpypRzARPiBzUIfCryC71QK7FSiINP9WyRJBa+Bi8y8FLcBH/st+fvQCca7Z71/jVhdeR8ocgdqvNVvrR4uPSLk41CfcJkLmgkVnr8CGJh4GjC79tbFKbe/lQPbNWL8CIyBbhEIB3W84mA0ypYP4SD+0O8; Expires=Wed, 13 Oct 2021 13:47:58 GMT; Path=/, AWSALBTGCORS=5i5R7sbGrTD4ZipxEuXpypRzARPiBzUIfCryC71QK7FSiINP9WyRJBa+Bi8y8FLcBH/st+fvQCca7Z71/jVhdeR8ocgdqvNVvrR4uPSLk41CfcJkLmgkVnr8CGJh4GjC79tbFKbe/lQPbNWL8CIyBbhEIB3W84mA0ypYP4SD+0O8; Expires=Wed, 13 Oct 2021 13:47:58 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;html&gt;&lt;head&gt;&lt;title&gt;Error&lt;/title&gt;&lt;/head&gt;&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-83">
+          <a>com.intuit.karate.exception.KarateException: Soap.feature:493 - status code was: 405, expected: 200, response time: 1150, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;</a>
+      </div>
+      <div id="msg-83" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: Soap.feature:493 - status code was: 405, expected: 200, response time: 1150, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-84">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-84" class="collapse collapsable-details">
+        <pre>19:17:58.475 status code was: 405, expected: 200, response time: 1150, url: https://soap.tracking.thermoking.com/tk-webservices/, response: &lt;html&gt;
+&lt;head&gt;
+&lt;META http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;title&gt;Error&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;HTTP method POST is not supported by this URL&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/remoteOnResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/remoteOnResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

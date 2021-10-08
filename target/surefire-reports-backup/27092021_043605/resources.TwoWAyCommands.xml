@@ -1,0 +1,191 @@
+<testsuite failures="0" name="resources/TwoWAyCommands.feature" skipped="0" tests="3" time="186.928981">
+  <testcase classname="resources.TwoWAyCommands" name="Remote Off" time="90.29312">
+    <system-out>* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+Given path 'connected-solutions/remoteOff/' ............................... passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].customerId == customerId ............................ passed
+And match response[0].vehicleId == vehicleId .............................. passed
+And match response[0].requestIdentifier == '#notnull' ..................... passed
+* def requestAPIName = response[0].requestIdentifier ...................... passed
+Then print requestAPIName ................................................. passed
+* def myrequestID = call read('GetRequestStatus.feature@requestStatus') {requestAPIName : '#(requestAPIName)', authToken : '#(authToken)', customerId : '#(customerId)', vehicleId : '#(vehicleId)'} . passed
+* def resu = call result 40000 ............................................ passed</system-out>
+  </testcase>
+  <testcase classname="resources.TwoWAyCommands" name="Get Temperature Data for vehicles" time="51.145973">
+    <system-out>* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+Given path 'connected-solutions/remoteOff/' ............................... passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].customerId == customerId ............................ passed
+And match response[0].vehicleId == vehicleId .............................. passed
+And match response[0].requestIdentifier == '#notnull' ..................... passed
+* def requestAPIName = response[0].requestIdentifier ...................... passed
+Then print requestAPIName ................................................. passed
+* def myrequestID = call read('GetRequestStatus.feature@requestStatus') {requestAPIName : '#(requestAPIName)', authToken : '#(authToken)', customerId : '#(customerId)', vehicleId : '#(vehicleId)'} . passed
+* def resu = call result 40000 ............................................ passed
+* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+* def getDate = ........................................................... passed
+* def currentDate = getDate() ............................................. passed
+* def startTime = currentDate + ' 00:00:00' ............................... passed
+* def endTime = currentDate + ' 10:05:00' ................................. passed
+* def pathId = 'connected-solutions/getTemperatureDataForVehicles/' + startTime + '/' + endTime + '/' . passed
+Given path pathId ......................................................... passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].vehicleName == '#notnull' ........................... passed
+* def resu = call result 40000 ............................................ passed</system-out>
+  </testcase>
+  <testcase classname="resources.TwoWAyCommands" name="Remote On" time="45.489888">
+    <system-out>* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+Given path 'connected-solutions/remoteOff/' ............................... passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].customerId == customerId ............................ passed
+And match response[0].vehicleId == vehicleId .............................. passed
+And match response[0].requestIdentifier == '#notnull' ..................... passed
+* def requestAPIName = response[0].requestIdentifier ...................... passed
+Then print requestAPIName ................................................. passed
+* def myrequestID = call read('GetRequestStatus.feature@requestStatus') {requestAPIName : '#(requestAPIName)', authToken : '#(authToken)', customerId : '#(customerId)', vehicleId : '#(vehicleId)'} . passed
+* def resu = call result 40000 ............................................ passed
+* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+* def getDate = ........................................................... passed
+* def currentDate = getDate() ............................................. passed
+* def startTime = currentDate + ' 00:00:00' ............................... passed
+* def endTime = currentDate + ' 10:05:00' ................................. passed
+* def pathId = 'connected-solutions/getTemperatureDataForVehicles/' + startTime + '/' + endTime + '/' . passed
+Given path pathId ......................................................... passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].vehicleName == '#notnull' ........................... passed
+* def resu = call result 40000 ............................................ passed
+* def propertiesData = .................................................... passed
+* def data = propertiesData() ............................................. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {X-External-ID: '#(customerId)'} .................... passed
+* def requestBody = {"userName": '#(userName)',"password": '#(password)'} . passed
+* params {vehicles: '#(vehicleId)'} ....................................... passed
+* def obtainToken = callonce read('TokenTwoWay.feature') {APIurl : '#(APIurl)', userName : '#(userName)', password : '#(password)', customerId : '#(customerId)'} . passed
+* def authToken = obtainToken.response.accessToken ........................ passed
+Then print authToken ...................................................... passed
+* def result = ............................................................ passed
+Given path 'connected-solutions/remoteOn/' ................................ passed
+And header X-OAUTH2-Token = authToken ..................................... passed
+And body= {"userName": '#(userName)',"password": '#(password)'} ........... passed
+And request requestBody ................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response[0].customerId == customerId ............................ passed
+And match response[0].vehicleId == vehicleId .............................. passed
+And match response[0].requestIdentifier == '#notnull' ..................... passed
+* def requestAPIName = response[0].requestIdentifier ...................... passed
+Then print requestAPIName ................................................. passed
+* def myrequestID = call read('GetRequestStatus.feature@requestStatus') {requestAPIName : '#(requestAPIName)', authToken : '#(authToken)', customerId : '#(customerId)', vehicleId : '#(vehicleId)'} . passed</system-out>
+  </testcase>
+</testsuite>

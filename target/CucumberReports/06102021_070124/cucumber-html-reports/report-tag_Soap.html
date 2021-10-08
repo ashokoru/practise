@@ -1,0 +1,3773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Tag: @Soap</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TK API Testing</td>
+            <td>06 Oct 2021, 19:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@Soap</td>
+                    <td >0</td>
+          <td >0</td>
+          <td     class="skipped"   >112</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">112</td>
+
+          <td >0</td>
+          <td  class="failed"    >15</td>
+          <td class="total">15</td>
+
+          <td class="duration" data-value="0">000ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Update Set Point zone 1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Clear All Alarms</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:clearAlarms&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:clearAlarms&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Perform Pre Trip</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:performPreTrip&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:performPreTrip&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Defrost	1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:defrost&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:defrost&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">ContinuousMode Mode</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterContinuousMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterContinuousMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">CycleSentryMode Mode</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:enterCycleSentryMode&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:enterCycleSentryMode&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Configure Temperature Settings</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-19" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;settings&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+                &lt;highTemperature&gt;10&lt;/highTemperature&gt;
+                &lt;lowTemperature&gt;-10&lt;/lowTemperature&gt;
+                &lt;rangeRelativeTo&gt;1&lt;/rangeRelativeTo&gt;
+                &lt;outOfRange&gt;10&lt;/outOfRange&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Temperature Settings</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-22" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewTemperatureRangeSettings&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewTemperatureRangeSettings&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Optiset Profile</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Activate Optiset Profile</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-28" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:activateOptisetProfile&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;profile_id&gt;625295551&lt;/profile_id&gt;
+            &lt;setPoint&gt;-23&lt;/setPoint&gt;
+            &lt;language&gt;1&lt;/language&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:activateOptisetProfile&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Configure Door Alarm</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:configureDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;settings&gt;
+                &lt;dwellTime&gt;20&lt;/dwellTime&gt;
+                &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;/settings&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:configureDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-34">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">View Door Alarm</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-34" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-35">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-35" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:viewDoorAlarm&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repeti+E13:E15tions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:viewDoorAlarm&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Remote Off</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-37" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-39">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOff&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOff&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/remoteOffResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/remoteOffResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-40">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Get Temperature Data</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-40" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-41">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-41" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def getDate =</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-42" class="collapse collapsable-details">
+        <pre>function() {
+  var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+  var sdf = new SimpleDateFormat('yyyy-MM-dd');
+  var date = new java.util.Date();
+  return sdf.format(date);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def currentDate = getDate()</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def startTime = currentDate + 'T00:00:00'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def endTime = currentDate + 'T10:05:00'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'Data'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-43">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-43" class="collapse collapsable-details">
+        <pre>&lt;soap:Envelope xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soap:Header/&gt;
+    &lt;soap:Body&gt;
+        &lt;ser:getTemperatureDataForVehicles&gt;
+            &lt;!--Optional:--&gt;
+            &lt;customerReferenceId&gt;#(customerId)&lt;/customerReferenceId&gt;
+            &lt;!--Optional:--&gt;
+            &lt;startTime&gt;#(startTime)&lt;/startTime&gt;
+            &lt;!--Optional:--&gt;
+            &lt;endTime&gt;#(endTime)&lt;/endTime&gt;
+        &lt;/ser:getTemperatureDataForVehicles&gt;
+    &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">000ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-44">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Remote On</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-44" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-45">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-45" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-46">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-46" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:remoteOn&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:remoteOn&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/remoteOnResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/remoteOnResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<testsuite failures="0" name="resources/Soap.feature" skipped="0" tests="1" time="43.82033">
+  <testcase classname="resources.Soap" name="Update Set Point zone 1" time="43.82033">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'Bluebox India 2' ....................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+</testsuite>

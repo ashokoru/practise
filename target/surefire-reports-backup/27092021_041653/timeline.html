@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = new vis.DataSet([{"id":1,"content":"pool-1-thread-1"}]);
+var items = new vis.DataSet([{"id":1,"group":1,"content":"TwoWAyCommands[1:75]","start":1482,"end":51831,"title":"TwoWAyCommands[1:75] 05:30:01.482-05:30:51.831 Update Set Point"},{"id":2,"group":1,"content":"TwoWAyCommands[2:94]","start":51845,"end":95968,"title":"TwoWAyCommands[2:94] 05:30:51.845-05:31:35.968 Perform Pre Trip"},{"id":3,"group":1,"content":"TwoWAyCommands[3:111]","start":96037,"end":141069,"title":"TwoWAyCommands[3:111] 05:31:36.037-05:32:21.069 Cycle Sentry Mode"},{"id":4,"group":1,"content":"TwoWAyCommands[4:128]","start":141092,"end":184742,"title":"TwoWAyCommands[4:128] 05:32:21.092-05:33:04.742 Continuous Mode"},{"id":5,"group":1,"content":"TwoWAyCommands[5:145]","start":184752,"end":228364,"title":"TwoWAyCommands[5:145] 05:33:04.752-05:33:48.364 Defrost"},{"id":6,"group":1,"content":"TwoWAyCommands[6:163]","start":228375,"end":273529,"title":"TwoWAyCommands[6:163] 05:33:48.375-05:34:33.529 Clear Alarms"},{"id":7,"group":1,"content":"TwoWAyCommands[7:181]","start":273546,"end":315485,"title":"TwoWAyCommands[7:181] 05:34:33.546-05:35:15.485 View Optiset Profile"},{"id":8,"group":1,"content":"TwoWAyCommands[8:196]","start":315500,"end":317923,"title":"TwoWAyCommands[8:196] 05:35:15.500-05:35:17.923 Activate Optiset Profile"},{"id":9,"group":1,"content":"TwoWAyCommands[9:215]","start":317934,"end":362377,"title":"TwoWAyCommands[9:215] 05:35:17.934-05:36:02.377 Configure Door Alarm"},{"id":10,"group":1,"content":"TwoWAyCommands[10:232]","start":362390,"end":405208,"title":"TwoWAyCommands[10:232] 05:36:02.390-05:36:45.208 Configure Temperature Range Settings"},{"id":11,"group":1,"content":"TwoWAyCommands[11:249]","start":405224,"end":447687,"title":"TwoWAyCommands[11:249] 05:36:45.224-05:37:27.687 View Door Alarm"},{"id":12,"group":1,"content":"TwoWAyCommands[12:261]","start":447693,"end":449054,"title":"TwoWAyCommands[12:261] 05:37:27.693-05:37:29.054 View Temperature Range Settings"},{"id":13,"group":1,"content":"TwoWAyCommands[13:279]","start":449074,"end":532674,"title":"TwoWAyCommands[13:279] 05:37:29.074-05:38:52.674 Remote Off"},{"id":14,"group":1,"content":"TwoWAyCommands[14:298]","start":532693,"end":576585,"title":"TwoWAyCommands[14:298] 05:38:52.693-05:39:36.585 Remote On"},{"id":15,"group":1,"content":"TwoWAyCommands[15:316]","start":576599,"end":633939,"title":"TwoWAyCommands[15:316] 05:39:36.599-05:40:33.939 Get Temperature Data for vehicles"}]);
+var container = document.getElementById('visualization');
+var timeline = new vis.Timeline(container);
+timeline.setOptions({ groupOrder: 'content' });
+timeline.setGroups(groups);
+timeline.setItems(items);
+</script>
+  </body>
+</html>

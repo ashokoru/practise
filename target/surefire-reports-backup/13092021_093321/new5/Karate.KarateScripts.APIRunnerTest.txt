@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: Karate.KarateScripts.APIRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.179 s <<< FAILURE! - in Karate.KarateScripts.APIRunnerTest
+Karate.KarateScripts.APIRunnerTest.parallelRun  Time elapsed: 8.143 s  <<< FAILURE!
+java.lang.AssertionError: 
+failed features:
+resources.TwoWAyCommands: -unknown-:40 - 
+TokenTwoWay.feature:21 - status code was: 429, expected: 200, response time: 1218, url: https://restdev1.tracking.thermoking.com/connected-solutions/obtainToken/, response: {"path":"/connected-solutions/obtainToken/","error":"Too Many Requests","message":"This client has been exceeded the allowance of requests for this API","timestamp":"2021-09-13T16:03:01.686+0000","status":429}
+
+	at Karate.KarateScripts.APIRunnerTest.parallelRun(APIRunnerTest.java:54)
+

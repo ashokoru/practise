@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Tag: @parallel=false</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TK API Testing</td>
+            <td>13 Sep 2021, 21:06</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@parallel=false</td>
+                    <td      class="passed"    >57</td>
+          <td      class="failed"    >2</td>
+          <td     class="skipped"   >6</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">65</td>
+
+          <td  class="passed"    >3</td>
+          <td  class="failed"    >2</td>
+          <td class="total">5</td>
+
+          <td class="duration" data-value="85362046900">1m 25s 362ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-DetailsPost-feature.html">resources/DetailsPost.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">003ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Test Sample scenario</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def newp = 'data'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print newp</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>21:06:06.347 [print] data</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-DetailsPost-feature.html">resources/DetailsPost.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1s 405ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Get TP Customer Details</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">header X-OAUTH2-Token = accToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print accToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>21:06:06.377 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def res = call read('DetailsPost.feature@tag1')</span>
+  
+  <span class="lead-duration duration">058ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">resources/DetailsPost.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print res.result</span>
+  
+  <span class="lead-duration duration">019ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>21:06:06.455 [print]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'connected-solutions/GetCarrierVehicleList/'</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param externalCarrierId = '52D0B083-E9B7-47F6-9BAA-D22951DD1E50'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">body= {&quot;userName&quot;: &quot;webservice.usertp01@demosystem.com&quot;,&quot;password&quot;: &quot;Pass@1234&quot;}</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request body</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">1s 314ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>21:06:06.474 request:
+1 &gt; POST https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 72
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: restdev1.tracking.thermoking.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 &gt; X-External-ID: 5-UUvQsTkfI
+1 &gt; X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+{&quot;userName&quot;:&quot;webservice.usertp01@demosystem.com&quot;,&quot;password&quot;:&quot;Pass@1234&quot;}
+
+21:06:07.781 response time in milliseconds: 1303.39
+1 &lt; 401
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 15:36:07 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: [AWSALB=0SNx8CvftEmYAwrj7ZOEpewkSESgBpqBn/1xdE5BKxdanbpzyZbzPpoqw+tqcAbhnR1+kUgf3bYNUF5bf69BGbmi6u+H/iZyXn2/UJmdLYCdU0rdLKu1SyNlrbyd; Expires=Mon, 20 Sep 2021 15:36:07 GMT; Path=/, AWSALBCORS=0SNx8CvftEmYAwrj7ZOEpewkSESgBpqBn/1xdE5BKxdanbpzyZbzPpoqw+tqcAbhnR1+kUgf3bYNUF5bf69BGbmi6u+H/iZyXn2/UJmdLYCdU0rdLKu1SyNlrbyd; Expires=Mon, 20 Sep 2021 15:36:07 GMT; Path=/; SameSite=None; Secure]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-XSS-Protection: 1; mode=block
+{&quot;timestamp&quot;:&quot;2021-09-13T15:36:07.644+0000&quot;,&quot;status&quot;:401,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>com.intuit.karate.exception.KarateException: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1303, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:07.644+0000&quot;,&quot;status&quot;:401}</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1303, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:07.644+0000&quot;,&quot;status&quot;:401}</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>21:06:07.784 status code was: 401, expected: 200, response time: 1303, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:07.644+0000&quot;,&quot;status&quot;:401}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[*].vehicleExternalId contains ['1100295']</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-DetailsPost-feature.html">resources/DetailsPost.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_TripStart.html">@TripStart</a>
+      </div>
+
+  
+  <span class="lead-duration duration">1s 691ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Update Vehicle Trip Start</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-11" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">header X-OAUTH2-Token = accToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print accToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>21:06:07.869 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'connected-solutions/StartTrip/'</span>
+  
+  <span class="lead-duration duration">009ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param externalCarrierId = '52D0B083-E9B7-47F6-9BAA-D22951DD1E50'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param vehicleExtId = '1100295'</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param scheduledStartTime = '2021-05-19 09:00:00'</span>
+  
+  <span class="lead-duration duration">007ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param scheduledDeliveryTime = '2021-05-19 09:00:00'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param commodity = ''</span>
+  
+  <span class="lead-duration duration">029ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">body= {&quot;userName&quot;: &quot;webservice.usertp01@demosystem.com&quot;,&quot;password&quot;: &quot;Pass@1234&quot;}</span>
+  
+  <span class="lead-duration duration">018ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request body</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">1s 614ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>21:06:07.951 request:
+1 &gt; POST https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 72
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: restdev1.tracking.thermoking.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 &gt; X-External-ID: 5-UUvQsTkfI
+1 &gt; X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2MTgzLCJqdGkiOiI1LVVVdlFzVGtmSSJ9.erDSc-omH9mTT8IE1Ja3vjLmO0t8HiMqg6xG0Z00LFpSUHQzhf9Sc6ynuDPCcPK0U8rrwHF9zVPQibHhV-uOTw
+{&quot;userName&quot;:&quot;webservice.usertp01@demosystem.com&quot;,&quot;password&quot;:&quot;Pass@1234&quot;}
+
+21:06:09.560 response time in milliseconds: 1606.50
+1 &lt; 401
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 15:36:09 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: [AWSALB=mpdCPY/bcR7+uRlmeCpOnH+XWCd3kubG+WIDCfSM9U1Ya3GaZjTOyz7yXy+MjzbbXkwxQptz2eHtrzlmSfxBs1eJYvILI2b1aQVHmzsqtR0IK4Du6iO+GlREX9+r; Expires=Mon, 20 Sep 2021 15:36:09 GMT; Path=/, AWSALBCORS=mpdCPY/bcR7+uRlmeCpOnH+XWCd3kubG+WIDCfSM9U1Ya3GaZjTOyz7yXy+MjzbbXkwxQptz2eHtrzlmSfxBs1eJYvILI2b1aQVHmzsqtR0IK4Du6iO+GlREX9+r; Expires=Mon, 20 Sep 2021 15:36:09 GMT; Path=/; SameSite=None; Secure]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-XSS-Protection: 1; mode=block
+{&quot;timestamp&quot;:&quot;2021-09-13T15:36:09.343+0000&quot;,&quot;status&quot;:401,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>com.intuit.karate.exception.KarateException: DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1606, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:09.343+0000&quot;,&quot;status&quot;:401}</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1606, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:09.343+0000&quot;,&quot;status&quot;:401}</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>21:06:09.562 status code was: 401, expected: 200, response time: 1606, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:36:09.343+0000&quot;,&quot;status&quot;:401}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.tripStatus == 'STARTED'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.tripStopTime == null</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.isTripActive == 1</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-Soap-feature_1.html">resources/Soap.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1m 19s 614ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Update Set Point zone 1</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-17" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-18">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-18" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">118ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;#(customerId)&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;#(vehicleId)&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">7s 004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>21:06:03.698 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 649
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:updateSetPoint&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;customerVehicles&gt;
+                &lt;customerid&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerid&gt;
+                &lt;!--1 or more repetitions:--&gt;
+                &lt;vehicles&gt;Bluebox India 2&lt;/vehicles&gt;
+            &lt;/customerVehicles&gt;
+            &lt;zoneId&gt;1&lt;/zoneId&gt;
+            &lt;setPointValue&gt;-2&lt;/setPointValue&gt;
+        &lt;/ser:updateSetPoint&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+21:06:06.376 response time in milliseconds: 2676.70
+1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 486
+1 &lt; Content-Type: text/xml;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 15:36:06 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=4oEO8j3KkXkHOJ42HnYlpal2KMNxgqMDvbfqs0vah+HdxuiBAfSlRK14KIxyo76xuzv/XZWOi9JmdDvztlwdQah35+STGjLmk4RolRM+IK/cRcEWYnRxzvXY0n6xY4t9tR2VkdZ0B49O+468LtX1XCjSZcgM9q1VJyQbztlM940M; Expires=Mon, 20 Sep 2021 15:36:05 GMT; Path=/, AWSALBTGCORS=4oEO8j3KkXkHOJ42HnYlpal2KMNxgqMDvbfqs0vah+HdxuiBAfSlRK14KIxyo76xuzv/XZWOi9JmdDvztlwdQah35+STGjLmk4RolRM+IK/cRcEWYnRxzvXY0n6xY4t9tR2VkdZ0B49O+468LtX1XCjSZcgM9q1VJyQbztlM940M; Expires=Mon, 20 Sep 2021 15:36:05 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;ns2:updateSetPointResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;&lt;requestReference&gt;&lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;&lt;requestIdentifier&gt;q3468077&lt;/requestIdentifier&gt;&lt;vehicleId&gt;Bluebox India 2&lt;/vehicleId&gt;&lt;/requestReference&gt;&lt;/ns2:updateSetPointResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>21:06:06.383 [print] &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+  &lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;
+  &lt;soap:Body&gt;
+    &lt;ns2:updateSetPointResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+      &lt;requestReference&gt;
+        &lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;
+        &lt;requestIdentifier&gt;q3468077&lt;/requestIdentifier&gt;
+        &lt;vehicleId&gt;Bluebox India 2&lt;/vehicleId&gt;
+      &lt;/requestReference&gt;
+    &lt;/ns2:updateSetPointResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId</span>
+  
+  <span class="lead-duration duration">148ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestIdentifier</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>21:06:06.535 [print] q3468077</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'}</span>
+  
+  <span class="lead-duration duration">36s 204ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention"></span>
+  <span class="name">resources/Soap.feature</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details">
+        <pre>{
+  &quot;requestIdentifier&quot;: &quot;q3468077&quot;
+}
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url 'https://soap.tracking.thermoking.com/tk-webservices/Command'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">configure headers = {Content-Type: 'application/xml'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' }</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def vehicleId = 'Bluebox India 2'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def result =</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>function(pause){
+java.lang.Thread.sleep(pause)
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def resu = call result 32000</span>
+  
+  <span class="lead-duration duration">32s 033ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def myrequestID =</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>{
+requestIdentifier: '#(requestIdentifier)'
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">request</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details">
+        <pre>&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:getRequestStatus&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;RequestStatuses&gt;
+                &lt;customerId&gt;#(customerId)&lt;/customerId&gt;
+                &lt;requestReference&gt;#(requestIdentifier)&lt;/requestReference&gt;
+                &lt;vehicleId&gt;#(vehicleId)&lt;/vehicleId&gt;
+            &lt;/RequestStatuses&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:getRequestStatus&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">soap action ''</span>
+  
+  <span class="lead-duration duration">4s 078ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>21:06:38.651 request:
+1 &gt; POST https://soap.tracking.thermoking.com/tk-webservices/Command
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic d2Vic2VydmljZS51c2VyLmFsbC4yMTRATUlTU0lORy5DT006Z2g2MmpBST51TFB1dmxw
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 634
+1 &gt; Content-Type: application/xml; charset=UTF-8
+1 &gt; Cookie: AWSALBTG=4oEO8j3KkXkHOJ42HnYlpal2KMNxgqMDvbfqs0vah+HdxuiBAfSlRK14KIxyo76xuzv/XZWOi9JmdDvztlwdQah35+STGjLmk4RolRM+IK/cRcEWYnRxzvXY0n6xY4t9tR2VkdZ0B49O+468LtX1XCjSZcgM9q1VJyQbztlM940M; AWSALBTGCORS=4oEO8j3KkXkHOJ42HnYlpal2KMNxgqMDvbfqs0vah+HdxuiBAfSlRK14KIxyo76xuzv/XZWOi9JmdDvztlwdQah35+STGjLmk4RolRM+IK/cRcEWYnRxzvXY0n6xY4t9tR2VkdZ0B49O+468LtX1XCjSZcgM9q1VJyQbztlM940M
+1 &gt; Host: soap.tracking.thermoking.com
+1 &gt; SOAPAction: 
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+    &lt;soapenv:Header/&gt;
+    &lt;soapenv:Body&gt;
+        &lt;ser:getRequestStatus&gt;
+            &lt;!--1 or more repetitions:--&gt;
+            &lt;RequestStatuses&gt;
+                &lt;customerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/customerId&gt;
+                &lt;requestReference&gt;q3468077&lt;/requestReference&gt;
+                &lt;vehicleId&gt;Bluebox India 2&lt;/vehicleId&gt;
+            &lt;/RequestStatuses&gt;
+            &lt;operatorName&gt;?&lt;/operatorName&gt;
+        &lt;/ser:getRequestStatus&gt;
+    &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+21:06:42.713 response time in milliseconds: 4059.79
+1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 993
+1 &lt; Content-Type: text/xml;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 15:36:42 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Server: WildFly/10
+1 &lt; Set-Cookie: [AWSALBTG=rMVbH5zkNg142K8PzbvCLbW4SH78Ak+7ezzmB8spgW4Z1K4pBxHzd46XZsTWex8AmnGlpXE54VkslgLcGToh1xwG2+pjMmJeEH4aS1c0J4pvJItr4+Rp3srJp5UVZXthmOMohP/2o2guFj0I2CX69yXdL/M/CJv7nQE0689wp1/w; Expires=Mon, 20 Sep 2021 15:36:39 GMT; Path=/, AWSALBTGCORS=rMVbH5zkNg142K8PzbvCLbW4SH78Ak+7ezzmB8spgW4Z1K4pBxHzd46XZsTWex8AmnGlpXE54VkslgLcGToh1xwG2+pjMmJeEH4aS1c0J4pvJItr4+Rp3srJp5UVZXthmOMohP/2o2guFj0I2CX69yXdL/M/CJv7nQE0689wp1/w; Expires=Mon, 20 Sep 2021 15:36:39 GMT; Path=/; SameSite=None; Secure]
+1 &lt; X-Powered-By: Undertow/1
+&lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;ns2:getRequestStatusResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;&lt;RequestStatus xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;ns2:mqRequestStatus&quot;&gt;&lt;commandValue&gt;-2.0&lt;/commandValue&gt;&lt;communicationType&gt;SMS&lt;/communicationType&gt;&lt;dateRequestSent&gt;2021-09-13T15:36:06.067Z&lt;/dateRequestSent&gt;&lt;errorType&gt;&lt;/errorType&gt;&lt;externalCustomerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/externalCustomerId&gt;&lt;externalVehicleid&gt;Bluebox India 2&lt;/externalVehicleid&gt;&lt;messageType&gt;Two Way New Set Point Zone 1&lt;/messageType&gt;&lt;requestMessageTypeId&gt;7&lt;/requestMessageTypeId&gt;&lt;requestStatusId&gt;4&lt;/requestStatusId&gt;&lt;sourceIndicator&gt;0&lt;/sourceIndicator&gt;&lt;statusType&gt;Scheduled&lt;/statusType&gt;&lt;unitStateType&gt;&lt;/unitStateType&gt;&lt;vehicleRequestId&gt;3553333&lt;/vehicleRequestId&gt;&lt;/RequestStatus&gt;&lt;/ns2:getRequestStatusResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">004ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>21:06:42.725 [print] &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+  &lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;
+  &lt;soap:Body&gt;
+    &lt;ns2:getRequestStatusResponse xmlns:ns2=&quot;http://service.jbossws.webservices.celtrak.com/&quot;&gt;
+      &lt;RequestStatus xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;ns2:mqRequestStatus&quot;&gt;
+        &lt;commandValue&gt;-2.0&lt;/commandValue&gt;
+        &lt;communicationType&gt;SMS&lt;/communicationType&gt;
+        &lt;dateRequestSent&gt;2021-09-13T15:36:06.067Z&lt;/dateRequestSent&gt;
+        &lt;errorType/&gt;
+        &lt;externalCustomerId&gt;4560BD5E-BD7B-42B0-8DCB-627EB8454C72&lt;/externalCustomerId&gt;
+        &lt;externalVehicleid&gt;Bluebox India 2&lt;/externalVehicleid&gt;
+        &lt;messageType&gt;Two Way New Set Point Zone 1&lt;/messageType&gt;
+        &lt;requestMessageTypeId&gt;7&lt;/requestMessageTypeId&gt;
+        &lt;requestStatusId&gt;4&lt;/requestStatusId&gt;
+        &lt;sourceIndicator&gt;0&lt;/sourceIndicator&gt;
+        &lt;statusType&gt;Scheduled&lt;/statusType&gt;
+        &lt;unitStateType/&gt;
+        &lt;vehicleRequestId&gt;3553333&lt;/vehicleRequestId&gt;
+      &lt;/RequestStatus&gt;
+    &lt;/ns2:getRequestStatusResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_resources-TwoWAyCommands-feature_2.html">resources/TwoWAyCommands.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2s 647ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Update Set Point</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-29" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-30">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-30" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'connected-solutions/updateSetPoint/'</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param zone = '1'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param setpoint = '2'</span>
+  
+  <span class="lead-duration duration">003ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">header X-OAUTH2-Token = authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestBody</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">2s 613ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-31">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-31" class="collapse collapsable-details">
+        <pre>21:06:06.361 request:
+1 &gt; POST https://restdev1.tracking.thermoking.com/connected-solutions/updateSetPoint/?vehicles=Test+Vehicle+1&amp;zone=1&amp;setpoint=2
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 68
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: restdev1.tracking.thermoking.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_121)
+1 &gt; X-External-ID: 0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4
+1 &gt; X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2NjAwLCJqdGkiOiIwQzdGRkI4RS1CRTlELTRCNTEtOEQ2MS1DQTEwQkY0NTAzQzQifQ.yFt02SzWCF0E47cq1Oug1tm767-L1wmWV0K3WaCKbTkbzN2y0QsucU8Cb9c6Z4WmEZh4x0jper3xbX9ImMWi9w
+{&quot;userName&quot;:&quot;webservice.user214@MISSING.COM&quot;,&quot;password&quot;:&quot;Pass@1234&quot;}
+
+21:06:08.970 response time in milliseconds: 2605.47
+1 &lt; 200
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Mon, 13 Sep 2021 15:36:08 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Set-Cookie: [AWSALB=9o5qsU1Enw8QLssbsg0iVXzklwlIrLtSgpM3+eKzNqnJkaOVbuqKO67popboa/Ye9FLqUUUgtX2NIEXkt30QgPTpswpsSJDqM8zWox6948fP8Hy6Y9eY2bG54+An; Expires=Mon, 20 Sep 2021 15:36:07 GMT; Path=/, AWSALBCORS=9o5qsU1Enw8QLssbsg0iVXzklwlIrLtSgpM3+eKzNqnJkaOVbuqKO67popboa/Ye9FLqUUUgtX2NIEXkt30QgPTpswpsSJDqM8zWox6948fP8Hy6Y9eY2bG54+An; Expires=Mon, 20 Sep 2021 15:36:07 GMT; Path=/; SameSite=None; Secure]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-OAUTH2-Token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2NjAwLCJqdGkiOiIwQzdGRkI4RS1CRTlELTRCNTEtOEQ2MS1DQTEwQkY0NTAzQzQifQ.yFt02SzWCF0E47cq1Oug1tm767-L1wmWV0K3WaCKbTkbzN2y0QsucU8Cb9c6Z4WmEZh4x0jper3xbX9ImMWi9w
+1 &lt; X-XSS-Protection: 1; mode=block
+[{&quot;customerId&quot;:&quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;,&quot;vehicleId&quot;:&quot;Test Vehicle 1&quot;,&quot;requestIdentifier&quot;:&quot;q3260689&quot;,&quot;profiles&quot;:[]}]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-32" class="collapse collapsable-details">
+        <pre>21:06:08.973 [print] [
+  {
+    &quot;customerId&quot;: &quot;0C7FFB8E-BE9D-4B51-8D61-CA10BF4503C4&quot;,
+    &quot;profiles&quot;: [
+    ],
+    &quot;requestIdentifier&quot;: &quot;q3260689&quot;,
+    &quot;vehicleId&quot;: &quot;Test Vehicle 1&quot;
+  }
+]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[0].customerId == customerId</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[0].vehicleId == vehicleId</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestAPIName = response[0].requestIdentifier</span>
+  
+  <span class="lead-duration duration">010ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print requestAPIName</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>21:06:08.992 [print] q3260689</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print authToken</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>21:06:08.994 [print] eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJDb25uZWN0ZWQgU29sdXRpb25zIiwiZXhwIjoxNjMxNzE2NjAwLCJqdGkiOiIwQzdGRkI4RS1CRTlELTRCNTEtOEQ2MS1DQTEwQkY0NTAzQzQifQ.yFt02SzWCF0E47cq1Oug1tm767-L1wmWV0K3WaCKbTkbzN2y0QsucU8Cb9c6Z4WmEZh4x0jper3xbX9ImMWi9w</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

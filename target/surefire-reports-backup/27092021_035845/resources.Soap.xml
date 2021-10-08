@@ -1,0 +1,1771 @@
+<testsuite failures="3" name="resources/Soap.feature" skipped="0" tests="15" time="523.4845">
+  <testcase classname="resources.Soap" name="Update Set Point zone 1" time="37.254154">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Clear All Alarms" time="0.962159">
+    <failure message="Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1=&quot;http://service.jbossws.webservices.celtrak.com/&quot;/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped</failure>
+  </testcase>
+  <testcase classname="resources.Soap" name="Perform Pre Trip" time="34.829515">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Defrost&#9;1" time="34.780367">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="ContinuousMode Mode" time="34.354786">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="CycleSentryMode Mode" time="34.594191">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Configure Temperature Settings" time="34.212348">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="View Temperature Settings" time="0.914376">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="View Optiset Profile" time="1.268606">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Activate Optiset Profile" time="34.62461">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Configure Door Alarm" time="1.553766">
+    <failure message="Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1=&quot;http://service.jbossws.webservices.celtrak.com/&quot;/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;">* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:345)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped</failure>
+  </testcase>
+  <testcase classname="resources.Soap" name="View Door Alarm" time="1.057327">
+    <failure message="Soap.feature:374 - path: /Envelope/Body/viewDoorAlarmResponse/requestReference/status, actual: 'false', expected: 'true', reason: not equal">* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:345)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:374 - path: /Envelope/Body/viewDoorAlarmResponse/requestReference/status, actual: 'false', expected: 'true', reason: not equal&#13;
+	at ✽.And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' (Soap.feature:374)</failure>
+  </testcase>
+  <testcase classname="resources.Soap" name="Remote Off" time="35.555389">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:345)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:374 - path: /Envelope/Body/viewDoorAlarmResponse/requestReference/status, actual: 'false', expected: 'true', reason: not equal&#13;
+	at ✽.And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' (Soap.feature:374)&#13;
+
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/remoteOffResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/remoteOffResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Get Temperature Data" time="202.615352">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:345)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:374 - path: /Envelope/Body/viewDoorAlarmResponse/requestReference/status, actual: 'false', expected: 'true', reason: not equal&#13;
+	at ✽.And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' (Soap.feature:374)&#13;
+
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/remoteOffResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/remoteOffResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+* def getDate = ........................................................... passed
+* def currentDate = getDate() ............................................. passed
+* def startTime = currentDate + 'T00:00:00' ............................... passed
+* def endTime = currentDate + 'T10:05:00' ................................. passed
+Given url 'https://soap.tracking.thermoking.com/tk-webservices/Data' ...... passed
+And request ............................................................... passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+  <testcase classname="resources.Soap" name="Remote On" time="34.907554">
+    <system-out>* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:108 - status code was: 500, expected: 200, response time: 952, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;class com.celtrak.webservices.jbossws.service.exceptions.HasGuardedAlaramsException nor any of its super class is known to this context.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:108)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/clearAlarmsResponse/requestReferences/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/clearAlarmsResponse/requestReferences/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/performPreTripResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/performPreTripResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/defrostResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/defrostResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterContinuousModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterContinuousModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/enterCycleSentryModeResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/enterCycleSentryModeResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/configureTemperatureRangeSettingsResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewTemperatureRangeSettingsResponse/TemperatureRangeSettings/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewOptisetProfileResponse/OptisetProfile/customerId == customerId . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/activateOptisetProfileResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/activateOptisetProfileResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:345 - status code was: 500, expected: 200, response time: 1547, url: https://soap.tracking.thermoking.com/tk-webservices/Command, response: &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;&lt;SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/&gt;&lt;soap:Body&gt;&lt;soap:Fault&gt;&lt;faultcode&gt;soap:Server&lt;/faultcode&gt;&lt;faultstring&gt;Fault occurred while processing.&lt;/faultstring&gt;&lt;detail&gt;&lt;ns1:Exception xmlns:ns1="http://service.jbossws.webservices.celtrak.com/"/&gt;&lt;/detail&gt;&lt;/soap:Fault&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;&#13;
+	at ✽.Then status 200 (Soap.feature:345)&#13;
+
+And print response ........................................................ skipped
+And match response /Envelope/Body/configureDoorAlarmResponse/requestReference/customerId == customerId . skipped
+* def requestIdentifier = /Envelope/Body/configureDoorAlarmResponse/requestReference/requestIdentifier . skipped
+Then print requestIdentifier .............................................. skipped
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . skipped
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Soap.feature:374 - path: /Envelope/Body/viewDoorAlarmResponse/requestReference/status, actual: 'false', expected: 'true', reason: not equal&#13;
+	at ✽.And match response /Envelope/Body/viewDoorAlarmResponse/requestReference/status == 'true' (Soap.feature:374)&#13;
+
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/remoteOffResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/remoteOffResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+* def getDate = ........................................................... passed
+* def currentDate = getDate() ............................................. passed
+* def startTime = currentDate + 'T00:00:00' ............................... passed
+* def endTime = currentDate + 'T10:05:00' ................................. passed
+Given url 'https://soap.tracking.thermoking.com/tk-webservices/Data' ...... passed
+And request ............................................................... passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+* url 'https://soap.tracking.thermoking.com/tk-webservices/Command' ....... passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: 'webservice.user.all.214@MISSING.COM', password: 'gh62jAI&gt;uLPuvlp' } . passed
+* def customerId = '4560BD5E-BD7B-42B0-8DCB-627EB8454C72' ................. passed
+* def vehicleId = 'SR4 Ashok ATT PROD' .................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/remoteOnResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/remoteOnResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+</testsuite>

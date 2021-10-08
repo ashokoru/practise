@@ -1,0 +1,25 @@
+<testsuite failures="0" name="resources/Soap.feature" skipped="0" tests="1" time="41.740113">
+  <testcase classname="resources.Soap" name="Update Set Point zone 1" time="41.740113">
+    <system-out>* def data = call read('PropFiles.js') { test: 'soapTwoWay' } ............. passed
+* url data[0] ............................................................. passed
+* configure ssl = true .................................................... passed
+* configure cookies = null ................................................ passed
+* def APIurl = data[0] .................................................... passed
+* def userName = data[1] .................................................. passed
+* def password = data[2] .................................................. passed
+* def customerId = data[3] ................................................ passed
+* def vehicleId = data[4] ................................................. passed
+* configure headers = {Content-Type: 'application/xml'} ................... passed
+* header Authorization = call read('basic-auth.js') { username: '#(userName)', password: '#(password)' } . passed
+* path 'Command' .......................................................... passed
+* def result = ............................................................ passed
+Given request ............................................................. passed
+When soap action '' ....................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response /Envelope/Body/updateSetPointResponse/requestReference/customerId == customerId . passed
+* def requestIdentifier = /Envelope/Body/updateSetPointResponse/requestReference/requestIdentifier . passed
+Then print requestIdentifier .............................................. passed
+* def myrequestID = call read('Soap.feature@requestStatus') {requestIdentifier : '#(requestIdentifier)'} . passed</system-out>
+  </testcase>
+</testsuite>

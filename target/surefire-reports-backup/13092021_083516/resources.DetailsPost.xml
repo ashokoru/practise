@@ -1,0 +1,111 @@
+<testsuite failures="2" name="resources/DetailsPost.feature" skipped="0" tests="3" time="9.420328">
+  <testcase classname="resources.DetailsPost" name="Test Sample scenario" time="7.081675">
+    <system-out>* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+* def newp = 'data' ....................................................... passed
+Then print newp ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="resources.DetailsPost" name="Get TP Customer Details" time="1.171816">
+    <failure message="DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1116, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {&quot;path&quot;:&quot;/connected-solutions/GetCarrierVehicleList/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:04:08.204+0000&quot;,&quot;status&quot;:401}">* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+* def newp = 'data' ....................................................... passed
+Then print newp ........................................................... passed
+* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+Given header X-OAUTH2-Token = accToken .................................... passed
+Then print accToken ....................................................... passed
+* def res = call read('DetailsPost.feature@tag1') ......................... passed
+Then print res.result ..................................................... passed
+Given path 'connected-solutions/GetCarrierVehicleList/' ................... passed
+And param externalCarrierId = '52D0B083-E9B7-47F6-9BAA-D22951DD1E50' ...... passed
+And body= {"userName": "webservice.usertp01@demosystem.com","password": "Pass@1234"} . passed
+And request body .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1116, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {"path":"/connected-solutions/GetCarrierVehicleList/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:04:08.204+0000","status":401}&#13;
+	at ✽.Then status 200 (DetailsPost.feature:44)&#13;
+
+And print response ........................................................ skipped
+And match response[*].vehicleExternalId contains ['1100295'] .............. skipped</failure>
+  </testcase>
+  <testcase classname="resources.DetailsPost" name="Update Vehicle Trip Start" time="1.166837">
+    <failure message="DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1137, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {&quot;path&quot;:&quot;/connected-solutions/StartTrip/&quot;,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;Invalid Carrier External Id&quot;,&quot;timestamp&quot;:&quot;2021-09-13T15:04:09.393+0000&quot;,&quot;status&quot;:401}">* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+* def newp = 'data' ....................................................... passed
+Then print newp ........................................................... passed
+* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+Given header X-OAUTH2-Token = accToken .................................... passed
+Then print accToken ....................................................... passed
+* def res = call read('DetailsPost.feature@tag1') ......................... passed
+Then print res.result ..................................................... passed
+Given path 'connected-solutions/GetCarrierVehicleList/' ................... passed
+And param externalCarrierId = '52D0B083-E9B7-47F6-9BAA-D22951DD1E50' ...... passed
+And body= {"userName": "webservice.usertp01@demosystem.com","password": "Pass@1234"} . passed
+And request body .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: DetailsPost.feature:44 - status code was: 401, expected: 200, response time: 1116, url: https://restdev1.tracking.thermoking.com/connected-solutions/GetCarrierVehicleList/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50, response: {"path":"/connected-solutions/GetCarrierVehicleList/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:04:08.204+0000","status":401}&#13;
+	at ✽.Then status 200 (DetailsPost.feature:44)&#13;
+
+And print response ........................................................ skipped
+And match response[*].vehicleExternalId contains ['1100295'] .............. skipped
+* url 'https://restdev1.tracking.thermoking.com/' ......................... passed
+* configure ssl = true .................................................... passed
+* def newp = 'aa' ......................................................... passed
+* configure headers = {X-External-ID: '5-UUvQsTkfI'} ...................... passed
+* def obtainToken = callonce read('FridgioAuthToken.feature') ............. passed
+* def accToken = obtainToken.response.accessToken ......................... passed
+Then print accToken ....................................................... passed
+Given header X-OAUTH2-Token = accToken .................................... passed
+Then print accToken ....................................................... passed
+Given path 'connected-solutions/StartTrip/' ............................... passed
+And param externalCarrierId = '52D0B083-E9B7-47F6-9BAA-D22951DD1E50' ...... passed
+And param vehicleExtId = '1100295' ........................................ passed
+And param scheduledStartTime = '2021-05-19 09:00:00' ...................... passed
+And param scheduledDeliveryTime = '2021-05-19 09:00:00' ................... passed
+And param commodity = '' .................................................. passed
+And body= {"userName": "webservice.usertp01@demosystem.com","password": "Pass@1234"} . passed
+And request body .......................................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: DetailsPost.feature:62 - status code was: 401, expected: 200, response time: 1137, url: https://restdev1.tracking.thermoking.com/connected-solutions/StartTrip/?externalCarrierId=52D0B083-E9B7-47F6-9BAA-D22951DD1E50&amp;vehicleExtId=1100295&amp;scheduledStartTime=2021-05-19+09%3A00%3A00&amp;scheduledDeliveryTime=2021-05-19+09%3A00%3A00&amp;commodity=, response: {"path":"/connected-solutions/StartTrip/","error":"Unauthorized","message":"Invalid Carrier External Id","timestamp":"2021-09-13T15:04:09.393+0000","status":401}&#13;
+	at ✽.Then status 200 (DetailsPost.feature:62)&#13;
+
+And print response ........................................................ skipped
+And match response.tripStatus == 'STARTED' ................................ skipped
+And match response.tripStopTime == null ................................... skipped
+And match response.isTripActive == 1 ...................................... skipped</failure>
+  </testcase>
+</testsuite>
