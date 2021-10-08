@@ -61,6 +61,9 @@
     			<artifactId>maven-surefire-plugin</artifactId>
     			<version>3.0.0-M5</version>	
     			<configuration>
+    				<suiteXmlFiles>
+    					<suiteXmlFile>testng.xml</suiteXmlFile>
+    				</suiteXmlFiles>
     				<outputDirectory>${basedir}/target/surefire-reports/new5</outputDirectory>
           			<reportsDirectory>${basedir}/target/surefire-reports/new5</reportsDirectory>
     			</configuration>
